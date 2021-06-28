@@ -1,6 +1,6 @@
 ﻿namespace ValheimCharacterEditor.Valheim
 {
-    public class GameObjectItemProperties
+    public class GameObjectProperties
     {
         public int MaxStackSize { get; set; }
         public int MaxDurability { get; set; }
@@ -10,9 +10,9 @@
         public bool Craftable { get; set; }
         public string DisplayName { get; set; }
 
-        public GameObjectItemProperties() { }
+        public GameObjectProperties() { }
 
-        public GameObjectItemProperties(
+        public GameObjectProperties(
             int maxStackSize,
             int maxDurability,
             int durabilityPerLevel,

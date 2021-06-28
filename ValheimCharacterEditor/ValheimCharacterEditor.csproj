@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.1.9, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.9\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,8 +57,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Valheim\Biomes.cs" />
     <Compile Include="Valheim\Constants.cs" />
-    <Compile Include="Valheim\GameObjectItemProperties.cs" />
+    <Compile Include="Valheim\Food.cs" />
+    <Compile Include="Valheim\GameObjectProperties.cs" />
+    <Compile Include="Valheim\GameObjects.cs" />
+    <Compile Include="Valheim\Item.cs" />
+    <Compile Include="Valheim\Skill.cs" />
+    <Compile Include="Valheim\SkillNames.cs" />
+    <Compile Include="Valheim\Vector3.cs" />
+    <Compile Include="Valheim\World.cs" />
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,7 +78,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
