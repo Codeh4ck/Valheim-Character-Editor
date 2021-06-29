@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Chanut-Role-Playing-Viking.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.1.9, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
@@ -49,15 +54,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmCharacterEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCharacterEditor.Designer.cs">
+      <DependentUpon>FrmCharacterEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmInventory.Designer.cs">
+      <DependentUpon>FrmInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="LastFormClosingApplicationContext.cs" />
+    <Compile Include="Models\Character.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\BinaryStream.cs" />
+    <Compile Include="Utilities\CharacterLoader.cs" />
+    <Compile Include="Utilities\CharacterParser.cs" />
+    <Compile Include="Utilities\Extensions\ArrayExtensions.cs" />
+    <Compile Include="Utilities\Extensions\Vector3Extensions.cs" />
+    <Compile Include="Utilities\FileBrowserTools.cs" />
+    <Compile Include="Utilities\ValheimInstanceTools.cs" />
     <Compile Include="Valheim\Biomes.cs" />
+    <Compile Include="Valheim\Character.cs" />
     <Compile Include="Valheim\Constants.cs" />
     <Compile Include="Valheim\Food.cs" />
     <Compile Include="Valheim\GameObjectProperties.cs" />
@@ -67,6 +94,12 @@
     <Compile Include="Valheim\SkillNames.cs" />
     <Compile Include="Valheim\Vector3.cs" />
     <Compile Include="Valheim\World.cs" />
+    <EmbeddedResource Include="Forms\FrmCharacterEditor.resx">
+      <DependentUpon>FrmCharacterEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmInventory.resx">
+      <DependentUpon>FrmInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Chanut-Role-Playing-Viking.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

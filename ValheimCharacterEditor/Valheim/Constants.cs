@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace ValheimCharacterEditor.Valheim
 {
     public class Constants
     {
-        public static List<string> Beards = new List<string>
+        public static List<string> Beards = new()
         {
             "No beard",
             "Braided 1",
@@ -19,7 +21,7 @@ namespace ValheimCharacterEditor.Valheim
             "Thick 1"
         };
 
-        public static List<string> InternalBeards = new List<string>
+        public static List<string> InternalBeards = new()
         {
             "BeardNone",
             "Beard5",
@@ -34,7 +36,7 @@ namespace ValheimCharacterEditor.Valheim
             "Beard8"
         };
 
-        public static readonly List<string> Hairs = new List<string>
+        public static readonly List<string> Hairs = new()
         {
             "No hair",
             "Braided 1",
@@ -53,7 +55,7 @@ namespace ValheimCharacterEditor.Valheim
             "Side Swept 3"
         };
 
-        public static readonly List<string> InternalHairs = new List<string>
+        public static readonly List<string> InternalHairs = new()
         {
             "HairNone",
             "Hair3",
@@ -72,13 +74,13 @@ namespace ValheimCharacterEditor.Valheim
             "Hair14"
         };
 
-        public static readonly List<string> Genders = new List<string>
+        public static readonly List<string> Genders = new()
         {
             "Male",
             "Female"
         };
 
-        public static readonly List<string> Skills = new List<string>
+        public static readonly List<string> Skills = new()
         {
             "Swords",
             "Knives",
@@ -97,8 +99,21 @@ namespace ValheimCharacterEditor.Valheim
             "Swim"
         };
 
-
-
         public const string NameDisallowedCharacters = "0123456789,;.:-_´¨{}][+*`^¡¿'?=)(/&¬%$·#@!|ª\\º\"'";
+
+        public static readonly string ValheimBasePath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+            @"AppData\LocalLow\IronGate\Valheim\");
+
+        public static int GetInternalGender(string gender)
+        {
+            if (gender.ToLower() == "male") return 0;
+            return 1;
+        }
+        public static string GetGenderName(int gender)
+        {
+            if (gender == 0) return "Male";
+            return "Female";
+        }
     }
 }
