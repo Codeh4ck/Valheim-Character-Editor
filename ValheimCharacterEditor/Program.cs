@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ValheimCharacterEditor.Forms;
 
 namespace ValheimCharacterEditor
 {
@@ -13,7 +14,9 @@ namespace ValheimCharacterEditor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
+
+            LastFormClosingApplicationContext appContext = new LastFormClosingApplicationContext(new FrmMain());
+            Application.Run(appContext);
         }
     }
 }
