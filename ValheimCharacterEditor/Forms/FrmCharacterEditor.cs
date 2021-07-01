@@ -2,8 +2,6 @@
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
-using ValheimCharacterEditor.Models;
 using ValheimCharacterEditor.Utilities.Extensions;
 using ValheimCharacterEditor.Valheim;
 
@@ -12,7 +10,6 @@ namespace ValheimCharacterEditor.Forms
     public partial class FrmCharacterEditor : Form
     {
         private readonly CharacterEntity _characterEntity;
-
         public FrmCharacterEditor(CharacterEntity characterEntity)
         {
             _characterEntity = characterEntity ?? throw new ArgumentNullException(nameof(characterEntity));
@@ -21,17 +18,8 @@ namespace ValheimCharacterEditor.Forms
 
         private void FrmCharacterEditor_Load(object sender, EventArgs e)
         {
+            Text = $"Editing character: {_characterEntity.Data.Name}";
             PopulateFields();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
 
         private void PopulateFields()
@@ -103,14 +91,20 @@ namespace ValheimCharacterEditor.Forms
             panelHairColor.BackColor = colorDialog.Color;
         }
 
-        private Tuple<Guna2TrackBar, Guna2HtmlLabel> GetSkillControls(Skill skill)
+        private void btnEditInventory_Click(object sender, EventArgs e)
+        {
+            using FrmInventory frmInventory = new FrmInventory(_characterEntity.Data.Inventory, _characterEntity.Data.Name);
+            frmInventory.ShowDialog(this);
+        }
+
+        private Tuple<TrackBar, Label> GetSkillControls(Skill skill)
         {
             string skillName = skill.SkillName.ToString("F").ToLower();
 
-            Guna2TrackBar trackbarControl = null;
-            Guna2HtmlLabel labelControl = null;
+            TrackBar trackbarControl = null;
+            Label labelControl = null;
 
-            foreach (Guna2TrackBar c in groupSkills.Controls.OfType<Guna2TrackBar>())
+            foreach (TrackBar c in groupSkills.Controls.OfType<TrackBar>())
             {
                 if (c.Name.ToLower().Replace("trackbar", "") == skillName)
                 {
@@ -119,7 +113,7 @@ namespace ValheimCharacterEditor.Forms
                 }
             }
 
-            foreach (Guna2HtmlLabel c in groupSkills.Controls.OfType<Guna2HtmlLabel>())
+            foreach (Label c in groupSkills.Controls.OfType<Label>())
             {
                 if (c.Name.ToLower().Replace("label", "") == skillName)
                 {
@@ -128,7 +122,29 @@ namespace ValheimCharacterEditor.Forms
                 }
             }
 
-            return new Tuple<Guna2TrackBar, Guna2HtmlLabel>(trackbarControl, labelControl);
+            return new Tuple<TrackBar, Label>(trackbarControl, labelControl);
+        }
+
+        private void SkillTrackBar_Scroll(object sender, EventArgs e)
+        {
+            TrackBar trackbar = (TrackBar)sender;
+
+            string skillName = trackbar.Name.ToLower().Replace("trackbar", "");
+
+            foreach (Label c in groupSkills.Controls.OfType<Label>())
+            {
+                if (c.Name.ToLower().Replace("label", "") == skillName)
+                    c.Text = trackbar.Value.ToString();
+            }
+        }
+
+        private void numSetAll_ValueChanged(object sender, EventArgs e)
+        {
+            foreach (TrackBar trackbar in groupSkills.Controls.OfType<TrackBar>())
+            {
+                trackbar.Value = (int)numSetAll.Value;
+                SkillTrackBar_Scroll(trackbar, new ScrollEventArgs(ScrollEventType.ThumbTrack, trackbar.Value));
+            }
         }
     }
 }

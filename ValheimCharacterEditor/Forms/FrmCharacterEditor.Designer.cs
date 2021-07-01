@@ -29,1141 +29,924 @@ namespace ValheimCharacterEditor.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCharacterEditor));
-            this.borderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.panelTitle = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnMinimize = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.labelTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.groupDetails = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btnEditHairColor = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.panelHairColor = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnEditSkinTone = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.panelSkinTone = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cbHair = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cbBeard = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbGender = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.groupSkills = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.dragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.trackBarSwords = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelSwords = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelKnives = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarKnives = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelClubs = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarClubs = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelBlocking = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarBlocking = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelSpears = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarSpears = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelPolearms = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarPolearms = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelJump = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarJump = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelWoodcutting = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarWoodcutting = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelPickaxes = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarPickaxes = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelUnarmed = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarUnarmed = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelBows = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel27 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarBows = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelAxes = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel29 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarAxes = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelSneak = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel31 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarSneak = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelSwim = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel33 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarSwim = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.labelRun = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel35 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.trackBarRun = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.btnEditInventory = new Guna.UI2.WinForms.Guna2Button();
-            this.btnApply = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.panelTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.groupDetails = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panelHairColor = new System.Windows.Forms.Panel();
+            this.btnEditHairColor = new System.Windows.Forms.Button();
+            this.btnEditSkinTone = new System.Windows.Forms.Button();
+            this.panelSkinTone = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbHair = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbBeard = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupSkills = new System.Windows.Forms.GroupBox();
+            this.labelSwim = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.trackBarSwim = new System.Windows.Forms.TrackBar();
+            this.labelRun = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.trackBarRun = new System.Windows.Forms.TrackBar();
+            this.labelSneak = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.trackBarSneak = new System.Windows.Forms.TrackBar();
+            this.labelJump = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.trackBarJump = new System.Windows.Forms.TrackBar();
+            this.labelWoodcutting = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.trackBarWoodcutting = new System.Windows.Forms.TrackBar();
+            this.labelPickaxes = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.trackBarPickaxes = new System.Windows.Forms.TrackBar();
+            this.labelUnarmed = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.trackBarUnarmed = new System.Windows.Forms.TrackBar();
+            this.labelBows = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.trackBarBows = new System.Windows.Forms.TrackBar();
+            this.labelAxes = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.trackBarAxes = new System.Windows.Forms.TrackBar();
+            this.labelBlocking = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.trackBarBlocking = new System.Windows.Forms.TrackBar();
+            this.labelSpears = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.trackBarSpears = new System.Windows.Forms.TrackBar();
+            this.labelPolearms = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.trackBarPolearms = new System.Windows.Forms.TrackBar();
+            this.labelClubs = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.trackBarClubs = new System.Windows.Forms.TrackBar();
+            this.labelKnives = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.trackBarKnives = new System.Windows.Forms.TrackBar();
+            this.labelSwords = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.trackBarSwords = new System.Windows.Forms.TrackBar();
+            this.btnEditInventory = new System.Windows.Forms.Button();
+            this.btnApply = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numSetAll = new System.Windows.Forms.NumericUpDown();
             this.groupDetails.SuspendLayout();
             this.groupSkills.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSwim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSneak)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarJump)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarWoodcutting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPickaxes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarUnarmed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBows)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAxes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBlocking)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSpears)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPolearms)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarClubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarKnives)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSwords)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSetAll)).BeginInit();
             this.SuspendLayout();
-            // 
-            // borderlessForm
-            // 
-            this.borderlessForm.ContainerControl = this;
-            this.borderlessForm.ResizeForm = false;
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.Controls.Add(this.guna2PictureBox1);
-            this.panelTitle.Controls.Add(this.btnMinimize);
-            this.panelTitle.Controls.Add(this.btnClose);
-            this.panelTitle.Controls.Add(this.labelTitle);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.panelTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.ShadowDecoration.Parent = this.panelTitle;
-            this.panelTitle.Size = new System.Drawing.Size(829, 46);
-            this.panelTitle.TabIndex = 2;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(48, 40);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnMinimize.CheckedState.Parent = this.btnMinimize;
-            this.btnMinimize.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnMinimize.HoverState.ImageOffset = new System.Drawing.Point(0, -1);
-            this.btnMinimize.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnMinimize.HoverState.Parent = this.btnMinimize;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnMinimize.ImageRotate = 0F;
-            this.btnMinimize.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnMinimize.Location = new System.Drawing.Point(751, 6);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnMinimize.PressedState.ImageOffset = new System.Drawing.Point(0, 1);
-            this.btnMinimize.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnMinimize.PressedState.Parent = this.btnMinimize;
-            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
-            this.btnMinimize.Size = new System.Drawing.Size(32, 32);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnClose.CheckedState.Parent = this.btnClose;
-            this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            this.btnClose.HoverState.ImageOffset = new System.Drawing.Point(0, -1);
-            this.btnClose.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnClose.ImageRotate = 0F;
-            this.btnClose.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnClose.Location = new System.Drawing.Point(789, 6);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            this.btnClose.PressedState.ImageOffset = new System.Drawing.Point(0, 1);
-            this.btnClose.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnClose.PressedState.Parent = this.btnClose;
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(32, 32);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(56, 14);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(206, 20);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Valheim Character Editor";
             // 
             // groupDetails
             // 
-            this.groupDetails.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.groupDetails.Controls.Add(this.guna2HtmlLabel1);
-            this.groupDetails.Controls.Add(this.btnEditHairColor);
+            this.groupDetails.Controls.Add(this.label6);
             this.groupDetails.Controls.Add(this.panelHairColor);
+            this.groupDetails.Controls.Add(this.btnEditHairColor);
             this.groupDetails.Controls.Add(this.btnEditSkinTone);
             this.groupDetails.Controls.Add(this.panelSkinTone);
-            this.groupDetails.Controls.Add(this.guna2HtmlLabel6);
-            this.groupDetails.Controls.Add(this.guna2HtmlLabel5);
+            this.groupDetails.Controls.Add(this.label5);
             this.groupDetails.Controls.Add(this.cbHair);
-            this.groupDetails.Controls.Add(this.guna2HtmlLabel4);
+            this.groupDetails.Controls.Add(this.label4);
             this.groupDetails.Controls.Add(this.cbBeard);
-            this.groupDetails.Controls.Add(this.guna2HtmlLabel3);
-            this.groupDetails.Controls.Add(this.txtName);
+            this.groupDetails.Controls.Add(this.label3);
             this.groupDetails.Controls.Add(this.cbGender);
-            this.groupDetails.Controls.Add(this.guna2HtmlLabel2);
-            this.groupDetails.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.groupDetails.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupDetails.ForeColor = System.Drawing.Color.White;
-            this.groupDetails.Location = new System.Drawing.Point(13, 53);
+            this.groupDetails.Controls.Add(this.label2);
+            this.groupDetails.Controls.Add(this.txtName);
+            this.groupDetails.Controls.Add(this.label1);
+            this.groupDetails.Location = new System.Drawing.Point(13, 13);
             this.groupDetails.Name = "groupDetails";
-            this.groupDetails.ShadowDecoration.Parent = this.groupDetails;
-            this.groupDetails.Size = new System.Drawing.Size(294, 507);
-            this.groupDetails.TabIndex = 3;
+            this.groupDetails.Size = new System.Drawing.Size(265, 399);
+            this.groupDetails.TabIndex = 0;
+            this.groupDetails.TabStop = false;
             this.groupDetails.Text = "Character details";
             // 
-            // btnEditHairColor
+            // label6
             // 
-            this.btnEditHairColor.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditHairColor.CheckedState.Parent = this.btnEditHairColor;
-            this.btnEditHairColor.CustomImages.Parent = this.btnEditHairColor;
-            this.btnEditHairColor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditHairColor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditHairColor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditHairColor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditHairColor.DisabledState.Parent = this.btnEditHairColor;
-            this.btnEditHairColor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEditHairColor.ForeColor = System.Drawing.Color.White;
-            this.btnEditHairColor.HoverState.Parent = this.btnEditHairColor;
-            this.btnEditHairColor.Location = new System.Drawing.Point(230, 415);
-            this.btnEditHairColor.Name = "btnEditHairColor";
-            this.btnEditHairColor.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnEditHairColor.ShadowDecoration.Parent = this.btnEditHairColor;
-            this.btnEditHairColor.Size = new System.Drawing.Size(48, 36);
-            this.btnEditHairColor.TabIndex = 16;
-            this.btnEditHairColor.Text = "Edit";
-            this.btnEditHairColor.UseTransparentBackground = true;
-            this.btnEditHairColor.Click += new System.EventHandler(this.btnEditHairColor_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 343);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Hair color:";
             // 
             // panelHairColor
             // 
-            this.panelHairColor.Location = new System.Drawing.Point(16, 415);
+            this.panelHairColor.Location = new System.Drawing.Point(28, 359);
             this.panelHairColor.Name = "panelHairColor";
-            this.panelHairColor.ShadowDecoration.Parent = this.panelHairColor;
-            this.panelHairColor.Size = new System.Drawing.Size(208, 36);
-            this.panelHairColor.TabIndex = 15;
+            this.panelHairColor.Size = new System.Drawing.Size(112, 23);
+            this.panelHairColor.TabIndex = 12;
+            // 
+            // btnEditHairColor
+            // 
+            this.btnEditHairColor.Location = new System.Drawing.Point(154, 359);
+            this.btnEditHairColor.Name = "btnEditHairColor";
+            this.btnEditHairColor.Size = new System.Drawing.Size(75, 23);
+            this.btnEditHairColor.TabIndex = 13;
+            this.btnEditHairColor.Text = "Edit";
+            this.btnEditHairColor.UseVisualStyleBackColor = true;
+            this.btnEditHairColor.Click += new System.EventHandler(this.btnEditHairColor_Click);
             // 
             // btnEditSkinTone
             // 
-            this.btnEditSkinTone.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditSkinTone.CheckedState.Parent = this.btnEditSkinTone;
-            this.btnEditSkinTone.CustomImages.Parent = this.btnEditSkinTone;
-            this.btnEditSkinTone.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditSkinTone.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditSkinTone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditSkinTone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditSkinTone.DisabledState.Parent = this.btnEditSkinTone;
-            this.btnEditSkinTone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEditSkinTone.ForeColor = System.Drawing.Color.White;
-            this.btnEditSkinTone.HoverState.Parent = this.btnEditSkinTone;
-            this.btnEditSkinTone.Location = new System.Drawing.Point(230, 349);
+            this.btnEditSkinTone.Location = new System.Drawing.Point(154, 308);
             this.btnEditSkinTone.Name = "btnEditSkinTone";
-            this.btnEditSkinTone.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnEditSkinTone.ShadowDecoration.Parent = this.btnEditSkinTone;
-            this.btnEditSkinTone.Size = new System.Drawing.Size(48, 36);
-            this.btnEditSkinTone.TabIndex = 14;
+            this.btnEditSkinTone.Size = new System.Drawing.Size(75, 23);
+            this.btnEditSkinTone.TabIndex = 12;
             this.btnEditSkinTone.Text = "Edit";
-            this.btnEditSkinTone.UseTransparentBackground = true;
+            this.btnEditSkinTone.UseVisualStyleBackColor = true;
             this.btnEditSkinTone.Click += new System.EventHandler(this.btnEditSkinTone_Click);
             // 
             // panelSkinTone
             // 
-            this.panelSkinTone.Location = new System.Drawing.Point(16, 349);
+            this.panelSkinTone.Location = new System.Drawing.Point(28, 308);
             this.panelSkinTone.Name = "panelSkinTone";
-            this.panelSkinTone.ShadowDecoration.Parent = this.panelSkinTone;
-            this.panelSkinTone.Size = new System.Drawing.Size(208, 36);
-            this.panelSkinTone.TabIndex = 13;
+            this.panelSkinTone.Size = new System.Drawing.Size(112, 23);
+            this.panelSkinTone.TabIndex = 11;
             // 
-            // guna2HtmlLabel6
+            // label5
             // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(16, 391);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(71, 18);
-            this.guna2HtmlLabel6.TabIndex = 11;
-            this.guna2HtmlLabel6.Text = "Hair color:";
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(16, 325);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(71, 18);
-            this.guna2HtmlLabel5.TabIndex = 9;
-            this.guna2HtmlLabel5.Text = "Skin tone:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 291);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Skin tone:";
             // 
             // cbHair
             // 
-            this.cbHair.BackColor = System.Drawing.Color.Transparent;
-            this.cbHair.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbHair.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbHair.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbHair.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbHair.FocusedState.Parent = this.cbHair;
-            this.cbHair.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.cbHair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbHair.HoverState.Parent = this.cbHair;
-            this.cbHair.ItemHeight = 30;
-            this.cbHair.ItemsAppearance.Parent = this.cbHair;
-            this.cbHair.Location = new System.Drawing.Point(16, 283);
+            this.cbHair.FormattingEnabled = true;
+            this.cbHair.Location = new System.Drawing.Point(28, 201);
             this.cbHair.Name = "cbHair";
-            this.cbHair.ShadowDecoration.Parent = this.cbHair;
-            this.cbHair.Size = new System.Drawing.Size(262, 36);
-            this.cbHair.TabIndex = 8;
+            this.cbHair.Size = new System.Drawing.Size(201, 21);
+            this.cbHair.TabIndex = 9;
             // 
-            // guna2HtmlLabel4
+            // label4
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(16, 259);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(34, 18);
-            this.guna2HtmlLabel4.TabIndex = 7;
-            this.guna2HtmlLabel4.Text = "Hair:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(25, 184);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Hair:";
             // 
             // cbBeard
             // 
-            this.cbBeard.BackColor = System.Drawing.Color.Transparent;
-            this.cbBeard.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbBeard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBeard.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbBeard.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbBeard.FocusedState.Parent = this.cbBeard;
-            this.cbBeard.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.cbBeard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbBeard.HoverState.Parent = this.cbBeard;
-            this.cbBeard.ItemHeight = 30;
-            this.cbBeard.ItemsAppearance.Parent = this.cbBeard;
-            this.cbBeard.Location = new System.Drawing.Point(16, 217);
+            this.cbBeard.FormattingEnabled = true;
+            this.cbBeard.Location = new System.Drawing.Point(28, 151);
             this.cbBeard.Name = "cbBeard";
-            this.cbBeard.ShadowDecoration.Parent = this.cbBeard;
-            this.cbBeard.Size = new System.Drawing.Size(262, 36);
-            this.cbBeard.TabIndex = 6;
+            this.cbBeard.Size = new System.Drawing.Size(201, 21);
+            this.cbBeard.TabIndex = 7;
             // 
-            // guna2HtmlLabel3
+            // label3
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(16, 193);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(46, 18);
-            this.guna2HtmlLabel3.TabIndex = 5;
-            this.guna2HtmlLabel3.Text = "Beard:";
-            // 
-            // txtName
-            // 
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultText = "";
-            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.DisabledState.Parent = this.txtName;
-            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.FocusedState.Parent = this.txtName;
-            this.txtName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(16, 85);
-            this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
-            this.txtName.PlaceholderText = "";
-            this.txtName.SelectedText = "";
-            this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(262, 36);
-            this.txtName.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(25, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Beard:";
             // 
             // cbGender
             // 
-            this.cbGender.BackColor = System.Drawing.Color.Transparent;
-            this.cbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGender.FocusedState.Parent = this.cbGender;
-            this.cbGender.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.cbGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbGender.HoverState.Parent = this.cbGender;
-            this.cbGender.ItemHeight = 30;
-            this.cbGender.ItemsAppearance.Parent = this.cbGender;
-            this.cbGender.Location = new System.Drawing.Point(16, 151);
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Location = new System.Drawing.Point(28, 101);
             this.cbGender.Name = "cbGender";
-            this.cbGender.ShadowDecoration.Parent = this.cbGender;
-            this.cbGender.Size = new System.Drawing.Size(262, 36);
+            this.cbGender.Size = new System.Drawing.Size(201, 21);
             this.cbGender.TabIndex = 3;
             // 
-            // guna2HtmlLabel2
+            // label2
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(16, 127);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(55, 18);
-            this.guna2HtmlLabel2.TabIndex = 2;
-            this.guna2HtmlLabel2.Text = "Gender:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Gender:";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(28, 51);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(201, 21);
+            this.txtName.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Character name:";
             // 
             // groupSkills
             // 
-            this.groupSkills.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
             this.groupSkills.Controls.Add(this.labelSwim);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel33);
+            this.groupSkills.Controls.Add(this.label24);
             this.groupSkills.Controls.Add(this.trackBarSwim);
             this.groupSkills.Controls.Add(this.labelRun);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel35);
+            this.groupSkills.Controls.Add(this.label26);
             this.groupSkills.Controls.Add(this.trackBarRun);
             this.groupSkills.Controls.Add(this.labelSneak);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel31);
+            this.groupSkills.Controls.Add(this.label28);
             this.groupSkills.Controls.Add(this.trackBarSneak);
             this.groupSkills.Controls.Add(this.labelJump);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel19);
+            this.groupSkills.Controls.Add(this.label30);
             this.groupSkills.Controls.Add(this.trackBarJump);
             this.groupSkills.Controls.Add(this.labelWoodcutting);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel21);
+            this.groupSkills.Controls.Add(this.label32);
             this.groupSkills.Controls.Add(this.trackBarWoodcutting);
             this.groupSkills.Controls.Add(this.labelPickaxes);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel23);
+            this.groupSkills.Controls.Add(this.label34);
             this.groupSkills.Controls.Add(this.trackBarPickaxes);
             this.groupSkills.Controls.Add(this.labelUnarmed);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel25);
+            this.groupSkills.Controls.Add(this.label36);
             this.groupSkills.Controls.Add(this.trackBarUnarmed);
             this.groupSkills.Controls.Add(this.labelBows);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel27);
+            this.groupSkills.Controls.Add(this.label38);
             this.groupSkills.Controls.Add(this.trackBarBows);
             this.groupSkills.Controls.Add(this.labelAxes);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel29);
+            this.groupSkills.Controls.Add(this.label16);
             this.groupSkills.Controls.Add(this.trackBarAxes);
             this.groupSkills.Controls.Add(this.labelBlocking);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel13);
+            this.groupSkills.Controls.Add(this.label18);
             this.groupSkills.Controls.Add(this.trackBarBlocking);
             this.groupSkills.Controls.Add(this.labelSpears);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel15);
+            this.groupSkills.Controls.Add(this.label20);
             this.groupSkills.Controls.Add(this.trackBarSpears);
             this.groupSkills.Controls.Add(this.labelPolearms);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel17);
+            this.groupSkills.Controls.Add(this.label22);
             this.groupSkills.Controls.Add(this.trackBarPolearms);
             this.groupSkills.Controls.Add(this.labelClubs);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel11);
+            this.groupSkills.Controls.Add(this.label12);
             this.groupSkills.Controls.Add(this.trackBarClubs);
             this.groupSkills.Controls.Add(this.labelKnives);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel9);
+            this.groupSkills.Controls.Add(this.label14);
             this.groupSkills.Controls.Add(this.trackBarKnives);
             this.groupSkills.Controls.Add(this.labelSwords);
-            this.groupSkills.Controls.Add(this.guna2HtmlLabel7);
+            this.groupSkills.Controls.Add(this.label10);
             this.groupSkills.Controls.Add(this.trackBarSwords);
-            this.groupSkills.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.groupSkills.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupSkills.ForeColor = System.Drawing.Color.White;
-            this.groupSkills.Location = new System.Drawing.Point(313, 53);
+            this.groupSkills.Location = new System.Drawing.Point(284, 13);
             this.groupSkills.Name = "groupSkills";
-            this.groupSkills.ShadowDecoration.Parent = this.groupSkills;
-            this.groupSkills.Size = new System.Drawing.Size(501, 507);
-            this.groupSkills.TabIndex = 4;
+            this.groupSkills.Size = new System.Drawing.Size(637, 601);
+            this.groupSkills.TabIndex = 1;
+            this.groupSkills.TabStop = false;
             this.groupSkills.Text = "Character skills";
-            // 
-            // dragControl
-            // 
-            this.dragControl.TargetControl = this.panelTitle;
-            // 
-            // trackBarSwords
-            // 
-            this.trackBarSwords.BackColor = System.Drawing.Color.White;
-            this.trackBarSwords.HoverState.Parent = this.trackBarSwords;
-            this.trackBarSwords.Location = new System.Drawing.Point(115, 55);
-            this.trackBarSwords.Minimum = 1;
-            this.trackBarSwords.Name = "trackBarSwords";
-            this.trackBarSwords.Size = new System.Drawing.Size(336, 23);
-            this.trackBarSwords.TabIndex = 0;
-            this.trackBarSwords.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(16, 63);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(114, 18);
-            this.guna2HtmlLabel1.TabIndex = 17;
-            this.guna2HtmlLabel1.Text = "Character name:";
-            // 
-            // guna2HtmlLabel7
-            // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(46, 56);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(57, 18);
-            this.guna2HtmlLabel7.TabIndex = 18;
-            this.guna2HtmlLabel7.Text = "Swords:";
-            // 
-            // labelSwords
-            // 
-            this.labelSwords.BackColor = System.Drawing.Color.Transparent;
-            this.labelSwords.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSwords.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelSwords.Location = new System.Drawing.Point(467, 56);
-            this.labelSwords.Name = "labelSwords";
-            this.labelSwords.Size = new System.Drawing.Size(11, 18);
-            this.labelSwords.TabIndex = 19;
-            this.labelSwords.Text = "0";
-            // 
-            // labelKnives
-            // 
-            this.labelKnives.BackColor = System.Drawing.Color.Transparent;
-            this.labelKnives.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKnives.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelKnives.Location = new System.Drawing.Point(467, 85);
-            this.labelKnives.Name = "labelKnives";
-            this.labelKnives.Size = new System.Drawing.Size(11, 18);
-            this.labelKnives.TabIndex = 22;
-            this.labelKnives.Text = "0";
-            // 
-            // guna2HtmlLabel9
-            // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(52, 85);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(51, 18);
-            this.guna2HtmlLabel9.TabIndex = 21;
-            this.guna2HtmlLabel9.Text = "Knives:";
-            // 
-            // trackBarKnives
-            // 
-            this.trackBarKnives.BackColor = System.Drawing.Color.White;
-            this.trackBarKnives.HoverState.Parent = this.trackBarKnives;
-            this.trackBarKnives.Location = new System.Drawing.Point(115, 84);
-            this.trackBarKnives.Minimum = 1;
-            this.trackBarKnives.Name = "trackBarKnives";
-            this.trackBarKnives.Size = new System.Drawing.Size(336, 23);
-            this.trackBarKnives.TabIndex = 20;
-            this.trackBarKnives.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelClubs
-            // 
-            this.labelClubs.BackColor = System.Drawing.Color.Transparent;
-            this.labelClubs.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClubs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelClubs.Location = new System.Drawing.Point(467, 114);
-            this.labelClubs.Name = "labelClubs";
-            this.labelClubs.Size = new System.Drawing.Size(11, 18);
-            this.labelClubs.TabIndex = 25;
-            this.labelClubs.Text = "0";
-            // 
-            // guna2HtmlLabel11
-            // 
-            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(59, 114);
-            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(44, 18);
-            this.guna2HtmlLabel11.TabIndex = 24;
-            this.guna2HtmlLabel11.Text = "Clubs:";
-            // 
-            // trackBarClubs
-            // 
-            this.trackBarClubs.BackColor = System.Drawing.Color.White;
-            this.trackBarClubs.HoverState.Parent = this.trackBarClubs;
-            this.trackBarClubs.Location = new System.Drawing.Point(115, 113);
-            this.trackBarClubs.Minimum = 1;
-            this.trackBarClubs.Name = "trackBarClubs";
-            this.trackBarClubs.Size = new System.Drawing.Size(336, 23);
-            this.trackBarClubs.TabIndex = 23;
-            this.trackBarClubs.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelBlocking
-            // 
-            this.labelBlocking.BackColor = System.Drawing.Color.Transparent;
-            this.labelBlocking.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBlocking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelBlocking.Location = new System.Drawing.Point(467, 201);
-            this.labelBlocking.Name = "labelBlocking";
-            this.labelBlocking.Size = new System.Drawing.Size(11, 18);
-            this.labelBlocking.TabIndex = 34;
-            this.labelBlocking.Text = "0";
-            // 
-            // guna2HtmlLabel13
-            // 
-            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(41, 201);
-            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(62, 18);
-            this.guna2HtmlLabel13.TabIndex = 33;
-            this.guna2HtmlLabel13.Text = "Blocking:";
-            // 
-            // trackBarBlocking
-            // 
-            this.trackBarBlocking.BackColor = System.Drawing.Color.White;
-            this.trackBarBlocking.HoverState.Parent = this.trackBarBlocking;
-            this.trackBarBlocking.Location = new System.Drawing.Point(115, 200);
-            this.trackBarBlocking.Minimum = 1;
-            this.trackBarBlocking.Name = "trackBarBlocking";
-            this.trackBarBlocking.Size = new System.Drawing.Size(336, 23);
-            this.trackBarBlocking.TabIndex = 32;
-            this.trackBarBlocking.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelSpears
-            // 
-            this.labelSpears.BackColor = System.Drawing.Color.Transparent;
-            this.labelSpears.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSpears.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelSpears.Location = new System.Drawing.Point(467, 172);
-            this.labelSpears.Name = "labelSpears";
-            this.labelSpears.Size = new System.Drawing.Size(11, 18);
-            this.labelSpears.TabIndex = 31;
-            this.labelSpears.Text = "0";
-            // 
-            // guna2HtmlLabel15
-            // 
-            this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel15.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(49, 172);
-            this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(54, 18);
-            this.guna2HtmlLabel15.TabIndex = 30;
-            this.guna2HtmlLabel15.Text = "Spears:";
-            // 
-            // trackBarSpears
-            // 
-            this.trackBarSpears.BackColor = System.Drawing.Color.White;
-            this.trackBarSpears.HoverState.Parent = this.trackBarSpears;
-            this.trackBarSpears.Location = new System.Drawing.Point(115, 171);
-            this.trackBarSpears.Minimum = 1;
-            this.trackBarSpears.Name = "trackBarSpears";
-            this.trackBarSpears.Size = new System.Drawing.Size(336, 23);
-            this.trackBarSpears.TabIndex = 29;
-            this.trackBarSpears.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelPolearms
-            // 
-            this.labelPolearms.BackColor = System.Drawing.Color.Transparent;
-            this.labelPolearms.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPolearms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelPolearms.Location = new System.Drawing.Point(467, 143);
-            this.labelPolearms.Name = "labelPolearms";
-            this.labelPolearms.Size = new System.Drawing.Size(11, 18);
-            this.labelPolearms.TabIndex = 28;
-            this.labelPolearms.Text = "0";
-            // 
-            // guna2HtmlLabel17
-            // 
-            this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel17.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(36, 143);
-            this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            this.guna2HtmlLabel17.Size = new System.Drawing.Size(67, 18);
-            this.guna2HtmlLabel17.TabIndex = 27;
-            this.guna2HtmlLabel17.Text = "Polearms:";
-            // 
-            // trackBarPolearms
-            // 
-            this.trackBarPolearms.BackColor = System.Drawing.Color.White;
-            this.trackBarPolearms.HoverState.Parent = this.trackBarPolearms;
-            this.trackBarPolearms.Location = new System.Drawing.Point(115, 142);
-            this.trackBarPolearms.Minimum = 1;
-            this.trackBarPolearms.Name = "trackBarPolearms";
-            this.trackBarPolearms.Size = new System.Drawing.Size(336, 23);
-            this.trackBarPolearms.TabIndex = 26;
-            this.trackBarPolearms.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelJump
-            // 
-            this.labelJump.BackColor = System.Drawing.Color.Transparent;
-            this.labelJump.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJump.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelJump.Location = new System.Drawing.Point(467, 375);
-            this.labelJump.Name = "labelJump";
-            this.labelJump.Size = new System.Drawing.Size(11, 18);
-            this.labelJump.TabIndex = 52;
-            this.labelJump.Text = "0";
-            // 
-            // guna2HtmlLabel19
-            // 
-            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel19.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(61, 375);
-            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            this.guna2HtmlLabel19.Size = new System.Drawing.Size(42, 18);
-            this.guna2HtmlLabel19.TabIndex = 51;
-            this.guna2HtmlLabel19.Text = "Jump:";
-            // 
-            // trackBarJump
-            // 
-            this.trackBarJump.BackColor = System.Drawing.Color.White;
-            this.trackBarJump.HoverState.Parent = this.trackBarJump;
-            this.trackBarJump.Location = new System.Drawing.Point(115, 374);
-            this.trackBarJump.Minimum = 1;
-            this.trackBarJump.Name = "trackBarJump";
-            this.trackBarJump.Size = new System.Drawing.Size(336, 23);
-            this.trackBarJump.TabIndex = 50;
-            this.trackBarJump.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelWoodcutting
-            // 
-            this.labelWoodcutting.BackColor = System.Drawing.Color.Transparent;
-            this.labelWoodcutting.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWoodcutting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelWoodcutting.Location = new System.Drawing.Point(467, 346);
-            this.labelWoodcutting.Name = "labelWoodcutting";
-            this.labelWoodcutting.Size = new System.Drawing.Size(11, 18);
-            this.labelWoodcutting.TabIndex = 49;
-            this.labelWoodcutting.Text = "0";
-            // 
-            // guna2HtmlLabel21
-            // 
-            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel21.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(10, 346);
-            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            this.guna2HtmlLabel21.Size = new System.Drawing.Size(93, 18);
-            this.guna2HtmlLabel21.TabIndex = 48;
-            this.guna2HtmlLabel21.Text = "Woodcutting:";
-            // 
-            // trackBarWoodcutting
-            // 
-            this.trackBarWoodcutting.BackColor = System.Drawing.Color.White;
-            this.trackBarWoodcutting.HoverState.Parent = this.trackBarWoodcutting;
-            this.trackBarWoodcutting.Location = new System.Drawing.Point(115, 345);
-            this.trackBarWoodcutting.Minimum = 1;
-            this.trackBarWoodcutting.Name = "trackBarWoodcutting";
-            this.trackBarWoodcutting.Size = new System.Drawing.Size(336, 23);
-            this.trackBarWoodcutting.TabIndex = 47;
-            this.trackBarWoodcutting.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelPickaxes
-            // 
-            this.labelPickaxes.BackColor = System.Drawing.Color.Transparent;
-            this.labelPickaxes.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPickaxes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelPickaxes.Location = new System.Drawing.Point(467, 317);
-            this.labelPickaxes.Name = "labelPickaxes";
-            this.labelPickaxes.Size = new System.Drawing.Size(11, 18);
-            this.labelPickaxes.TabIndex = 46;
-            this.labelPickaxes.Text = "0";
-            // 
-            // guna2HtmlLabel23
-            // 
-            this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel23.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(38, 317);
-            this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
-            this.guna2HtmlLabel23.Size = new System.Drawing.Size(65, 18);
-            this.guna2HtmlLabel23.TabIndex = 45;
-            this.guna2HtmlLabel23.Text = "Pickaxes:";
-            // 
-            // trackBarPickaxes
-            // 
-            this.trackBarPickaxes.BackColor = System.Drawing.Color.White;
-            this.trackBarPickaxes.HoverState.Parent = this.trackBarPickaxes;
-            this.trackBarPickaxes.Location = new System.Drawing.Point(115, 316);
-            this.trackBarPickaxes.Minimum = 1;
-            this.trackBarPickaxes.Name = "trackBarPickaxes";
-            this.trackBarPickaxes.Size = new System.Drawing.Size(336, 23);
-            this.trackBarPickaxes.TabIndex = 44;
-            this.trackBarPickaxes.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelUnarmed
-            // 
-            this.labelUnarmed.BackColor = System.Drawing.Color.Transparent;
-            this.labelUnarmed.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUnarmed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelUnarmed.Location = new System.Drawing.Point(467, 288);
-            this.labelUnarmed.Name = "labelUnarmed";
-            this.labelUnarmed.Size = new System.Drawing.Size(11, 18);
-            this.labelUnarmed.TabIndex = 43;
-            this.labelUnarmed.Text = "0";
-            // 
-            // guna2HtmlLabel25
-            // 
-            this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel25.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel25.Location = new System.Drawing.Point(37, 288);
-            this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
-            this.guna2HtmlLabel25.Size = new System.Drawing.Size(66, 18);
-            this.guna2HtmlLabel25.TabIndex = 42;
-            this.guna2HtmlLabel25.Text = "Unarmed:";
-            // 
-            // trackBarUnarmed
-            // 
-            this.trackBarUnarmed.BackColor = System.Drawing.Color.White;
-            this.trackBarUnarmed.HoverState.Parent = this.trackBarUnarmed;
-            this.trackBarUnarmed.Location = new System.Drawing.Point(115, 287);
-            this.trackBarUnarmed.Minimum = 1;
-            this.trackBarUnarmed.Name = "trackBarUnarmed";
-            this.trackBarUnarmed.Size = new System.Drawing.Size(336, 23);
-            this.trackBarUnarmed.TabIndex = 41;
-            this.trackBarUnarmed.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelBows
-            // 
-            this.labelBows.BackColor = System.Drawing.Color.Transparent;
-            this.labelBows.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBows.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelBows.Location = new System.Drawing.Point(467, 259);
-            this.labelBows.Name = "labelBows";
-            this.labelBows.Size = new System.Drawing.Size(11, 18);
-            this.labelBows.TabIndex = 40;
-            this.labelBows.Text = "0";
-            // 
-            // guna2HtmlLabel27
-            // 
-            this.guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel27.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel27.Location = new System.Drawing.Point(60, 259);
-            this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
-            this.guna2HtmlLabel27.Size = new System.Drawing.Size(43, 18);
-            this.guna2HtmlLabel27.TabIndex = 39;
-            this.guna2HtmlLabel27.Text = "Bows:";
-            // 
-            // trackBarBows
-            // 
-            this.trackBarBows.BackColor = System.Drawing.Color.White;
-            this.trackBarBows.HoverState.Parent = this.trackBarBows;
-            this.trackBarBows.Location = new System.Drawing.Point(115, 258);
-            this.trackBarBows.Minimum = 1;
-            this.trackBarBows.Name = "trackBarBows";
-            this.trackBarBows.Size = new System.Drawing.Size(336, 23);
-            this.trackBarBows.TabIndex = 38;
-            this.trackBarBows.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelAxes
-            // 
-            this.labelAxes.BackColor = System.Drawing.Color.Transparent;
-            this.labelAxes.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAxes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelAxes.Location = new System.Drawing.Point(467, 230);
-            this.labelAxes.Name = "labelAxes";
-            this.labelAxes.Size = new System.Drawing.Size(11, 18);
-            this.labelAxes.TabIndex = 37;
-            this.labelAxes.Text = "0";
-            // 
-            // guna2HtmlLabel29
-            // 
-            this.guna2HtmlLabel29.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel29.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel29.Location = new System.Drawing.Point(63, 230);
-            this.guna2HtmlLabel29.Name = "guna2HtmlLabel29";
-            this.guna2HtmlLabel29.Size = new System.Drawing.Size(40, 18);
-            this.guna2HtmlLabel29.TabIndex = 36;
-            this.guna2HtmlLabel29.Text = "Axes:";
-            // 
-            // trackBarAxes
-            // 
-            this.trackBarAxes.BackColor = System.Drawing.Color.White;
-            this.trackBarAxes.HoverState.Parent = this.trackBarAxes;
-            this.trackBarAxes.Location = new System.Drawing.Point(115, 229);
-            this.trackBarAxes.Minimum = 1;
-            this.trackBarAxes.Name = "trackBarAxes";
-            this.trackBarAxes.Size = new System.Drawing.Size(336, 23);
-            this.trackBarAxes.TabIndex = 35;
-            this.trackBarAxes.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            // 
-            // labelSneak
-            // 
-            this.labelSneak.BackColor = System.Drawing.Color.Transparent;
-            this.labelSneak.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSneak.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelSneak.Location = new System.Drawing.Point(467, 404);
-            this.labelSneak.Name = "labelSneak";
-            this.labelSneak.Size = new System.Drawing.Size(11, 18);
-            this.labelSneak.TabIndex = 55;
-            this.labelSneak.Text = "0";
-            // 
-            // guna2HtmlLabel31
-            // 
-            this.guna2HtmlLabel31.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel31.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel31.Location = new System.Drawing.Point(54, 404);
-            this.guna2HtmlLabel31.Name = "guna2HtmlLabel31";
-            this.guna2HtmlLabel31.Size = new System.Drawing.Size(49, 18);
-            this.guna2HtmlLabel31.TabIndex = 54;
-            this.guna2HtmlLabel31.Text = "Sneak:";
-            // 
-            // trackBarSneak
-            // 
-            this.trackBarSneak.BackColor = System.Drawing.Color.White;
-            this.trackBarSneak.HoverState.Parent = this.trackBarSneak;
-            this.trackBarSneak.Location = new System.Drawing.Point(115, 403);
-            this.trackBarSneak.Minimum = 1;
-            this.trackBarSneak.Name = "trackBarSneak";
-            this.trackBarSneak.Size = new System.Drawing.Size(336, 23);
-            this.trackBarSneak.TabIndex = 53;
-            this.trackBarSneak.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
             // 
             // labelSwim
             // 
-            this.labelSwim.BackColor = System.Drawing.Color.Transparent;
-            this.labelSwim.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSwim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelSwim.Location = new System.Drawing.Point(467, 462);
+            this.labelSwim.AutoSize = true;
+            this.labelSwim.Location = new System.Drawing.Point(567, 566);
             this.labelSwim.Name = "labelSwim";
-            this.labelSwim.Size = new System.Drawing.Size(11, 18);
-            this.labelSwim.TabIndex = 61;
-            this.labelSwim.Text = "0";
+            this.labelSwim.Size = new System.Drawing.Size(12, 13);
+            this.labelSwim.TabIndex = 47;
+            this.labelSwim.Text = "-";
             // 
-            // guna2HtmlLabel33
+            // label24
             // 
-            this.guna2HtmlLabel33.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel33.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel33.Location = new System.Drawing.Point(60, 462);
-            this.guna2HtmlLabel33.Name = "guna2HtmlLabel33";
-            this.guna2HtmlLabel33.Size = new System.Drawing.Size(43, 18);
-            this.guna2HtmlLabel33.TabIndex = 60;
-            this.guna2HtmlLabel33.Text = "Swim:";
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(55, 566);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 13);
+            this.label24.TabIndex = 46;
+            this.label24.Text = "Swim:";
             // 
             // trackBarSwim
             // 
-            this.trackBarSwim.BackColor = System.Drawing.Color.White;
-            this.trackBarSwim.HoverState.Parent = this.trackBarSwim;
-            this.trackBarSwim.Location = new System.Drawing.Point(115, 461);
+            this.trackBarSwim.AutoSize = false;
+            this.trackBarSwim.Location = new System.Drawing.Point(118, 557);
+            this.trackBarSwim.Maximum = 100;
             this.trackBarSwim.Minimum = 1;
             this.trackBarSwim.Name = "trackBarSwim";
-            this.trackBarSwim.Size = new System.Drawing.Size(336, 23);
-            this.trackBarSwim.TabIndex = 59;
-            this.trackBarSwim.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
+            this.trackBarSwim.Size = new System.Drawing.Size(423, 32);
+            this.trackBarSwim.TabIndex = 45;
+            this.trackBarSwim.TickFrequency = 5;
+            this.trackBarSwim.Value = 1;
+            this.trackBarSwim.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelRun
             // 
-            this.labelRun.BackColor = System.Drawing.Color.Transparent;
-            this.labelRun.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRun.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.labelRun.Location = new System.Drawing.Point(467, 433);
+            this.labelRun.AutoSize = true;
+            this.labelRun.Location = new System.Drawing.Point(567, 528);
             this.labelRun.Name = "labelRun";
-            this.labelRun.Size = new System.Drawing.Size(11, 18);
-            this.labelRun.TabIndex = 58;
-            this.labelRun.Text = "0";
+            this.labelRun.Size = new System.Drawing.Size(12, 13);
+            this.labelRun.TabIndex = 44;
+            this.labelRun.Text = "-";
             // 
-            // guna2HtmlLabel35
+            // label26
             // 
-            this.guna2HtmlLabel35.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel35.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
-            this.guna2HtmlLabel35.Location = new System.Drawing.Point(70, 433);
-            this.guna2HtmlLabel35.Name = "guna2HtmlLabel35";
-            this.guna2HtmlLabel35.Size = new System.Drawing.Size(33, 18);
-            this.guna2HtmlLabel35.TabIndex = 57;
-            this.guna2HtmlLabel35.Text = "Run:";
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(64, 528);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(34, 13);
+            this.label26.TabIndex = 43;
+            this.label26.Text = "Run:";
             // 
             // trackBarRun
             // 
-            this.trackBarRun.BackColor = System.Drawing.Color.White;
-            this.trackBarRun.HoverState.Parent = this.trackBarRun;
-            this.trackBarRun.Location = new System.Drawing.Point(115, 432);
+            this.trackBarRun.AutoSize = false;
+            this.trackBarRun.Location = new System.Drawing.Point(118, 519);
+            this.trackBarRun.Maximum = 100;
             this.trackBarRun.Minimum = 1;
             this.trackBarRun.Name = "trackBarRun";
-            this.trackBarRun.Size = new System.Drawing.Size(336, 23);
-            this.trackBarRun.TabIndex = 56;
-            this.trackBarRun.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(145)))), ((int)(((byte)(244)))));
+            this.trackBarRun.Size = new System.Drawing.Size(423, 32);
+            this.trackBarRun.TabIndex = 42;
+            this.trackBarRun.TickFrequency = 5;
+            this.trackBarRun.Value = 1;
+            this.trackBarRun.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelSneak
+            // 
+            this.labelSneak.AutoSize = true;
+            this.labelSneak.Location = new System.Drawing.Point(567, 490);
+            this.labelSneak.Name = "labelSneak";
+            this.labelSneak.Size = new System.Drawing.Size(12, 13);
+            this.labelSneak.TabIndex = 41;
+            this.labelSneak.Text = "-";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(50, 490);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(48, 13);
+            this.label28.TabIndex = 40;
+            this.label28.Text = "Sneak:";
+            // 
+            // trackBarSneak
+            // 
+            this.trackBarSneak.AutoSize = false;
+            this.trackBarSneak.Location = new System.Drawing.Point(118, 481);
+            this.trackBarSneak.Maximum = 100;
+            this.trackBarSneak.Minimum = 1;
+            this.trackBarSneak.Name = "trackBarSneak";
+            this.trackBarSneak.Size = new System.Drawing.Size(423, 32);
+            this.trackBarSneak.TabIndex = 39;
+            this.trackBarSneak.TickFrequency = 5;
+            this.trackBarSneak.Value = 1;
+            this.trackBarSneak.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelJump
+            // 
+            this.labelJump.AutoSize = true;
+            this.labelJump.Location = new System.Drawing.Point(567, 452);
+            this.labelJump.Name = "labelJump";
+            this.labelJump.Size = new System.Drawing.Size(12, 13);
+            this.labelJump.TabIndex = 38;
+            this.labelJump.Text = "-";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(56, 452);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(42, 13);
+            this.label30.TabIndex = 37;
+            this.label30.Text = "Jump:";
+            // 
+            // trackBarJump
+            // 
+            this.trackBarJump.AutoSize = false;
+            this.trackBarJump.Location = new System.Drawing.Point(118, 443);
+            this.trackBarJump.Maximum = 100;
+            this.trackBarJump.Minimum = 1;
+            this.trackBarJump.Name = "trackBarJump";
+            this.trackBarJump.Size = new System.Drawing.Size(423, 32);
+            this.trackBarJump.TabIndex = 36;
+            this.trackBarJump.TickFrequency = 5;
+            this.trackBarJump.Value = 1;
+            this.trackBarJump.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelWoodcutting
+            // 
+            this.labelWoodcutting.AutoSize = true;
+            this.labelWoodcutting.Location = new System.Drawing.Point(567, 414);
+            this.labelWoodcutting.Name = "labelWoodcutting";
+            this.labelWoodcutting.Size = new System.Drawing.Size(12, 13);
+            this.labelWoodcutting.TabIndex = 35;
+            this.labelWoodcutting.Text = "-";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(17, 414);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(81, 13);
+            this.label32.TabIndex = 34;
+            this.label32.Text = "Woodcutting:";
+            // 
+            // trackBarWoodcutting
+            // 
+            this.trackBarWoodcutting.AutoSize = false;
+            this.trackBarWoodcutting.Location = new System.Drawing.Point(118, 405);
+            this.trackBarWoodcutting.Maximum = 100;
+            this.trackBarWoodcutting.Minimum = 1;
+            this.trackBarWoodcutting.Name = "trackBarWoodcutting";
+            this.trackBarWoodcutting.Size = new System.Drawing.Size(423, 32);
+            this.trackBarWoodcutting.TabIndex = 33;
+            this.trackBarWoodcutting.TickFrequency = 5;
+            this.trackBarWoodcutting.Value = 1;
+            this.trackBarWoodcutting.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelPickaxes
+            // 
+            this.labelPickaxes.AutoSize = true;
+            this.labelPickaxes.Location = new System.Drawing.Point(567, 376);
+            this.labelPickaxes.Name = "labelPickaxes";
+            this.labelPickaxes.Size = new System.Drawing.Size(12, 13);
+            this.labelPickaxes.TabIndex = 32;
+            this.labelPickaxes.Text = "-";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(36, 376);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(62, 13);
+            this.label34.TabIndex = 31;
+            this.label34.Text = "Pickaxes:";
+            // 
+            // trackBarPickaxes
+            // 
+            this.trackBarPickaxes.AutoSize = false;
+            this.trackBarPickaxes.Location = new System.Drawing.Point(118, 367);
+            this.trackBarPickaxes.Maximum = 100;
+            this.trackBarPickaxes.Minimum = 1;
+            this.trackBarPickaxes.Name = "trackBarPickaxes";
+            this.trackBarPickaxes.Size = new System.Drawing.Size(423, 32);
+            this.trackBarPickaxes.TabIndex = 30;
+            this.trackBarPickaxes.TickFrequency = 5;
+            this.trackBarPickaxes.Value = 1;
+            this.trackBarPickaxes.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelUnarmed
+            // 
+            this.labelUnarmed.AutoSize = true;
+            this.labelUnarmed.Location = new System.Drawing.Point(567, 338);
+            this.labelUnarmed.Name = "labelUnarmed";
+            this.labelUnarmed.Size = new System.Drawing.Size(12, 13);
+            this.labelUnarmed.TabIndex = 29;
+            this.labelUnarmed.Text = "-";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(34, 338);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(64, 13);
+            this.label36.TabIndex = 28;
+            this.label36.Text = "Unarmed:";
+            // 
+            // trackBarUnarmed
+            // 
+            this.trackBarUnarmed.AutoSize = false;
+            this.trackBarUnarmed.Location = new System.Drawing.Point(118, 329);
+            this.trackBarUnarmed.Maximum = 100;
+            this.trackBarUnarmed.Minimum = 1;
+            this.trackBarUnarmed.Name = "trackBarUnarmed";
+            this.trackBarUnarmed.Size = new System.Drawing.Size(423, 32);
+            this.trackBarUnarmed.TabIndex = 27;
+            this.trackBarUnarmed.TickFrequency = 5;
+            this.trackBarUnarmed.Value = 1;
+            this.trackBarUnarmed.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelBows
+            // 
+            this.labelBows.AutoSize = true;
+            this.labelBows.Location = new System.Drawing.Point(567, 300);
+            this.labelBows.Name = "labelBows";
+            this.labelBows.Size = new System.Drawing.Size(12, 13);
+            this.labelBows.TabIndex = 26;
+            this.labelBows.Text = "-";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(56, 300);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(42, 13);
+            this.label38.TabIndex = 25;
+            this.label38.Text = "Bows:";
+            // 
+            // trackBarBows
+            // 
+            this.trackBarBows.AutoSize = false;
+            this.trackBarBows.Location = new System.Drawing.Point(118, 291);
+            this.trackBarBows.Maximum = 100;
+            this.trackBarBows.Minimum = 1;
+            this.trackBarBows.Name = "trackBarBows";
+            this.trackBarBows.Size = new System.Drawing.Size(423, 32);
+            this.trackBarBows.TabIndex = 24;
+            this.trackBarBows.TickFrequency = 5;
+            this.trackBarBows.Value = 1;
+            this.trackBarBows.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelAxes
+            // 
+            this.labelAxes.AutoSize = true;
+            this.labelAxes.Location = new System.Drawing.Point(567, 262);
+            this.labelAxes.Name = "labelAxes";
+            this.labelAxes.Size = new System.Drawing.Size(12, 13);
+            this.labelAxes.TabIndex = 23;
+            this.labelAxes.Text = "-";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(58, 262);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 13);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "Axes:";
+            // 
+            // trackBarAxes
+            // 
+            this.trackBarAxes.AutoSize = false;
+            this.trackBarAxes.Location = new System.Drawing.Point(118, 253);
+            this.trackBarAxes.Maximum = 100;
+            this.trackBarAxes.Minimum = 1;
+            this.trackBarAxes.Name = "trackBarAxes";
+            this.trackBarAxes.Size = new System.Drawing.Size(423, 32);
+            this.trackBarAxes.TabIndex = 21;
+            this.trackBarAxes.TickFrequency = 5;
+            this.trackBarAxes.Value = 1;
+            this.trackBarAxes.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelBlocking
+            // 
+            this.labelBlocking.AutoSize = true;
+            this.labelBlocking.Location = new System.Drawing.Point(567, 224);
+            this.labelBlocking.Name = "labelBlocking";
+            this.labelBlocking.Size = new System.Drawing.Size(12, 13);
+            this.labelBlocking.TabIndex = 20;
+            this.labelBlocking.Text = "-";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(38, 224);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(60, 13);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Blocking:";
+            // 
+            // trackBarBlocking
+            // 
+            this.trackBarBlocking.AutoSize = false;
+            this.trackBarBlocking.Location = new System.Drawing.Point(118, 215);
+            this.trackBarBlocking.Maximum = 100;
+            this.trackBarBlocking.Minimum = 1;
+            this.trackBarBlocking.Name = "trackBarBlocking";
+            this.trackBarBlocking.Size = new System.Drawing.Size(423, 32);
+            this.trackBarBlocking.TabIndex = 18;
+            this.trackBarBlocking.TickFrequency = 5;
+            this.trackBarBlocking.Value = 1;
+            this.trackBarBlocking.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelSpears
+            // 
+            this.labelSpears.AutoSize = true;
+            this.labelSpears.Location = new System.Drawing.Point(567, 186);
+            this.labelSpears.Name = "labelSpears";
+            this.labelSpears.Size = new System.Drawing.Size(12, 13);
+            this.labelSpears.TabIndex = 17;
+            this.labelSpears.Text = "-";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(46, 186);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(52, 13);
+            this.label20.TabIndex = 16;
+            this.label20.Text = "Spears:";
+            // 
+            // trackBarSpears
+            // 
+            this.trackBarSpears.AutoSize = false;
+            this.trackBarSpears.Location = new System.Drawing.Point(118, 177);
+            this.trackBarSpears.Maximum = 100;
+            this.trackBarSpears.Minimum = 1;
+            this.trackBarSpears.Name = "trackBarSpears";
+            this.trackBarSpears.Size = new System.Drawing.Size(423, 32);
+            this.trackBarSpears.TabIndex = 15;
+            this.trackBarSpears.TickFrequency = 5;
+            this.trackBarSpears.Value = 1;
+            this.trackBarSpears.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelPolearms
+            // 
+            this.labelPolearms.AutoSize = true;
+            this.labelPolearms.Location = new System.Drawing.Point(567, 148);
+            this.labelPolearms.Name = "labelPolearms";
+            this.labelPolearms.Size = new System.Drawing.Size(12, 13);
+            this.labelPolearms.TabIndex = 14;
+            this.labelPolearms.Text = "-";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(33, 148);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(65, 13);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "Polearms:";
+            // 
+            // trackBarPolearms
+            // 
+            this.trackBarPolearms.AutoSize = false;
+            this.trackBarPolearms.Location = new System.Drawing.Point(118, 139);
+            this.trackBarPolearms.Maximum = 100;
+            this.trackBarPolearms.Minimum = 1;
+            this.trackBarPolearms.Name = "trackBarPolearms";
+            this.trackBarPolearms.Size = new System.Drawing.Size(423, 32);
+            this.trackBarPolearms.TabIndex = 12;
+            this.trackBarPolearms.TickFrequency = 5;
+            this.trackBarPolearms.Value = 1;
+            this.trackBarPolearms.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelClubs
+            // 
+            this.labelClubs.AutoSize = true;
+            this.labelClubs.Location = new System.Drawing.Point(567, 110);
+            this.labelClubs.Name = "labelClubs";
+            this.labelClubs.Size = new System.Drawing.Size(12, 13);
+            this.labelClubs.TabIndex = 11;
+            this.labelClubs.Text = "-";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(54, 110);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 13);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Clubs:";
+            // 
+            // trackBarClubs
+            // 
+            this.trackBarClubs.AutoSize = false;
+            this.trackBarClubs.Location = new System.Drawing.Point(118, 101);
+            this.trackBarClubs.Maximum = 100;
+            this.trackBarClubs.Minimum = 1;
+            this.trackBarClubs.Name = "trackBarClubs";
+            this.trackBarClubs.Size = new System.Drawing.Size(423, 32);
+            this.trackBarClubs.TabIndex = 9;
+            this.trackBarClubs.TickFrequency = 5;
+            this.trackBarClubs.Value = 1;
+            this.trackBarClubs.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelKnives
+            // 
+            this.labelKnives.AutoSize = true;
+            this.labelKnives.Location = new System.Drawing.Point(567, 72);
+            this.labelKnives.Name = "labelKnives";
+            this.labelKnives.Size = new System.Drawing.Size(12, 13);
+            this.labelKnives.TabIndex = 8;
+            this.labelKnives.Text = "-";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(46, 72);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(50, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Knives:";
+            // 
+            // trackBarKnives
+            // 
+            this.trackBarKnives.AutoSize = false;
+            this.trackBarKnives.Location = new System.Drawing.Point(118, 63);
+            this.trackBarKnives.Maximum = 100;
+            this.trackBarKnives.Minimum = 1;
+            this.trackBarKnives.Name = "trackBarKnives";
+            this.trackBarKnives.Size = new System.Drawing.Size(423, 32);
+            this.trackBarKnives.TabIndex = 6;
+            this.trackBarKnives.TickFrequency = 5;
+            this.trackBarKnives.Value = 1;
+            this.trackBarKnives.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
+            // 
+            // labelSwords
+            // 
+            this.labelSwords.AutoSize = true;
+            this.labelSwords.Location = new System.Drawing.Point(567, 34);
+            this.labelSwords.Name = "labelSwords";
+            this.labelSwords.Size = new System.Drawing.Size(12, 13);
+            this.labelSwords.TabIndex = 5;
+            this.labelSwords.Text = "-";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(44, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 13);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Swords:";
+            // 
+            // trackBarSwords
+            // 
+            this.trackBarSwords.AutoSize = false;
+            this.trackBarSwords.Location = new System.Drawing.Point(118, 25);
+            this.trackBarSwords.Maximum = 100;
+            this.trackBarSwords.Minimum = 1;
+            this.trackBarSwords.Name = "trackBarSwords";
+            this.trackBarSwords.Size = new System.Drawing.Size(423, 32);
+            this.trackBarSwords.TabIndex = 3;
+            this.trackBarSwords.TickFrequency = 5;
+            this.trackBarSwords.Value = 1;
+            this.trackBarSwords.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // btnEditInventory
             // 
-            this.btnEditInventory.AutoRoundedCorners = true;
-            this.btnEditInventory.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditInventory.BorderRadius = 18;
-            this.btnEditInventory.CheckedState.Parent = this.btnEditInventory;
-            this.btnEditInventory.CustomImages.Parent = this.btnEditInventory;
-            this.btnEditInventory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditInventory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditInventory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditInventory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditInventory.DisabledState.Parent = this.btnEditInventory;
-            this.btnEditInventory.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditInventory.ForeColor = System.Drawing.Color.White;
-            this.btnEditInventory.HoverState.Parent = this.btnEditInventory;
-            this.btnEditInventory.Location = new System.Drawing.Point(12, 566);
+            this.btnEditInventory.Location = new System.Drawing.Point(13, 418);
             this.btnEditInventory.Name = "btnEditInventory";
-            this.btnEditInventory.ShadowDecoration.Parent = this.btnEditInventory;
-            this.btnEditInventory.Size = new System.Drawing.Size(225, 38);
-            this.btnEditInventory.TabIndex = 5;
+            this.btnEditInventory.Size = new System.Drawing.Size(265, 41);
+            this.btnEditInventory.TabIndex = 2;
             this.btnEditInventory.Text = "Edit character inventory";
-            this.btnEditInventory.UseTransparentBackground = true;
+            this.btnEditInventory.UseVisualStyleBackColor = true;
+            this.btnEditInventory.Click += new System.EventHandler(this.btnEditInventory_Click);
             // 
             // btnApply
             // 
-            this.btnApply.AutoRoundedCorners = true;
-            this.btnApply.BackColor = System.Drawing.Color.Transparent;
-            this.btnApply.BorderRadius = 18;
-            this.btnApply.CheckedState.Parent = this.btnApply;
-            this.btnApply.CustomImages.Parent = this.btnApply;
-            this.btnApply.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnApply.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnApply.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnApply.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnApply.DisabledState.Parent = this.btnApply;
-            this.btnApply.FillColor = System.Drawing.Color.ForestGreen;
-            this.btnApply.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApply.ForeColor = System.Drawing.Color.White;
-            this.btnApply.HoverState.Parent = this.btnApply;
-            this.btnApply.Location = new System.Drawing.Point(677, 569);
+            this.btnApply.Location = new System.Drawing.Point(167, 579);
             this.btnApply.Name = "btnApply";
-            this.btnApply.ShadowDecoration.Parent = this.btnApply;
-            this.btnApply.Size = new System.Drawing.Size(137, 38);
-            this.btnApply.TabIndex = 6;
+            this.btnApply.Size = new System.Drawing.Size(111, 35);
+            this.btnApply.TabIndex = 3;
             this.btnApply.Text = "Apply changes";
-            this.btnApply.UseTransparentBackground = true;
+            this.btnApply.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.AutoRoundedCorners = true;
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BorderRadius = 18;
-            this.btnCancel.CheckedState.Parent = this.btnCancel;
-            this.btnCancel.CustomImages.Parent = this.btnCancel;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.DisabledState.Parent = this.btnCancel;
-            this.btnCancel.FillColor = System.Drawing.Color.Tomato;
-            this.btnCancel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.HoverState.Parent = this.btnCancel;
-            this.btnCancel.Location = new System.Drawing.Point(517, 569);
+            this.btnCancel.Location = new System.Drawing.Point(50, 579);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
-            this.btnCancel.Size = new System.Drawing.Size(154, 38);
-            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Size = new System.Drawing.Size(111, 35);
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel && return";
-            this.btnCancel.UseTransparentBackground = true;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(81, 467);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Set all skills:";
+            // 
+            // numSetAll
+            // 
+            this.numSetAll.Location = new System.Drawing.Point(167, 465);
+            this.numSetAll.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numSetAll.Name = "numSetAll";
+            this.numSetAll.Size = new System.Drawing.Size(111, 21);
+            this.numSetAll.TabIndex = 16;
+            this.numSetAll.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numSetAll.ValueChanged += new System.EventHandler(this.numSetAll_ValueChanged);
             // 
             // FrmCharacterEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 617);
+            this.ClientSize = new System.Drawing.Size(933, 622);
+            this.Controls.Add(this.numSetAll);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnEditInventory);
             this.Controls.Add(this.groupSkills);
             this.Controls.Add(this.groupDetails);
-            this.Controls.Add(this.panelTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmCharacterEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Character Editor: ";
+            this.Text = "Character editor";
             this.Load += new System.EventHandler(this.FrmCharacterEditor_Load);
-            this.panelTitle.ResumeLayout(false);
-            this.panelTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.groupDetails.ResumeLayout(false);
             this.groupDetails.PerformLayout();
             this.groupSkills.ResumeLayout(false);
             this.groupSkills.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSwim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSneak)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarJump)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarWoodcutting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPickaxes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarUnarmed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBows)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAxes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBlocking)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSpears)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPolearms)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarClubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarKnives)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSwords)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSetAll)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2BorderlessForm borderlessForm;
-        private Guna.UI2.WinForms.Guna2GroupBox groupSkills;
-        private Guna.UI2.WinForms.Guna2GroupBox groupDetails;
-        private Guna.UI2.WinForms.Guna2CircleButton btnEditHairColor;
-        private Guna.UI2.WinForms.Guna2Panel panelHairColor;
-        private Guna.UI2.WinForms.Guna2CircleButton btnEditSkinTone;
-        private Guna.UI2.WinForms.Guna2Panel panelSkinTone;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2ComboBox cbHair;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2ComboBox cbBeard;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private Guna.UI2.WinForms.Guna2ComboBox cbGender;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2Panel panelTitle;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2ImageButton btnMinimize;
-        private Guna.UI2.WinForms.Guna2ImageButton btnClose;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelTitle;
-        private Guna.UI2.WinForms.Guna2DragControl dragControl;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelSwim;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel33;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarSwim;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelRun;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel35;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarRun;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelSneak;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel31;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarSneak;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelJump;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarJump;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelWoodcutting;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarWoodcutting;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelPickaxes;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarPickaxes;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelUnarmed;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarUnarmed;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelBows;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel27;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarBows;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelAxes;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel29;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarAxes;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelBlocking;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarBlocking;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelSpears;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarSpears;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelPolearms;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarPolearms;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelClubs;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarClubs;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelKnives;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarKnives;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelSwords;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarSwords;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Button btnCancel;
-        private Guna.UI2.WinForms.Guna2Button btnApply;
-        private Guna.UI2.WinForms.Guna2Button btnEditInventory;
+        private System.Windows.Forms.GroupBox groupDetails;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panelHairColor;
+        private System.Windows.Forms.Button btnEditHairColor;
+        private System.Windows.Forms.Button btnEditSkinTone;
+        private System.Windows.Forms.Panel panelSkinTone;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbHair;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbBeard;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbGender;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupSkills;
+        private System.Windows.Forms.Label labelSwim;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TrackBar trackBarSwim;
+        private System.Windows.Forms.Label labelRun;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TrackBar trackBarRun;
+        private System.Windows.Forms.Label labelSneak;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TrackBar trackBarSneak;
+        private System.Windows.Forms.Label labelJump;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TrackBar trackBarJump;
+        private System.Windows.Forms.Label labelWoodcutting;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TrackBar trackBarWoodcutting;
+        private System.Windows.Forms.Label labelPickaxes;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TrackBar trackBarPickaxes;
+        private System.Windows.Forms.Label labelUnarmed;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TrackBar trackBarUnarmed;
+        private System.Windows.Forms.Label labelBows;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TrackBar trackBarBows;
+        private System.Windows.Forms.Label labelAxes;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TrackBar trackBarAxes;
+        private System.Windows.Forms.Label labelBlocking;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TrackBar trackBarBlocking;
+        private System.Windows.Forms.Label labelSpears;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TrackBar trackBarSpears;
+        private System.Windows.Forms.Label labelPolearms;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TrackBar trackBarPolearms;
+        private System.Windows.Forms.Label labelClubs;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TrackBar trackBarClubs;
+        private System.Windows.Forms.Label labelKnives;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TrackBar trackBarKnives;
+        private System.Windows.Forms.Label labelSwords;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TrackBar trackBarSwords;
+        private System.Windows.Forms.Button btnEditInventory;
+        private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numSetAll;
     }
 }

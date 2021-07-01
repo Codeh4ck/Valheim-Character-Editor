@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-using ValheimCharacterEditor.Models;
 using ValheimCharacterEditor.Valheim;
 
 namespace ValheimCharacterEditor.Utilities

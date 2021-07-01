@@ -1,7 +1,6 @@
-﻿using System;
-using System.Windows.Forms;
-using ValheimCharacterEditor.Models;
+﻿using System.Windows.Forms;
 using ValheimCharacterEditor.Utilities;
+using ValheimCharacterEditor.Valheim;
 
 namespace ValheimCharacterEditor.Forms
 {
@@ -12,17 +11,7 @@ namespace ValheimCharacterEditor.Forms
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, System.EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void FrmMain_Load(object sender, EventArgs e)
+        private void FrmMain_Load(object sender, System.EventArgs e)
         {
             if (ValheimInstanceTools.IsValheimRunning())
             {
@@ -36,7 +25,7 @@ namespace ValheimCharacterEditor.Forms
             cbCharacters.DataSource = CharacterLoader.GetCharacterNames();
         }
 
-        private void btnEditCharacter_Click(object sender, EventArgs e)
+        private void btnEditCharacter_Click(object sender, System.EventArgs e)
         {
             CharacterEntity characterEntity = CharacterLoader.Characters[cbCharacters.SelectedIndex];
 
