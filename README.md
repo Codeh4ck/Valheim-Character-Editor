@@ -50,6 +50,7 @@ Valheim Character Editor is a character editor for the game Valheim. It is writt
 ## Known issues
 * Some item icons may be missing. I am working on adding them to the software
 * Some items may be missing trait modifications (durability is auto-set to the maximum for the gear level)
+* Editing a character with the same ID with another might display differences with the latter in the save window
 
 # Contributing
 
