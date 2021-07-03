@@ -29,12 +29,12 @@ namespace ValheimCharacterEditor.Valheim
         public Vector3 SkinColor;
         public float Stamina;
         public string StartSeed = "";
-        public Dictionary<string, int> Stations = new Dictionary<string, int>();
-        public Dictionary<string, string> Texts = new Dictionary<string, string>();
+        public Dictionary<string, int> Stations = new();
+        public Dictionary<string, string> Texts = new();
         public float TimeSinceDeath;
         public HashSet<string> Trophies;
         public HashSet<string> Uniques;
-        public Dictionary<long, World> WorldsData = new Dictionary<long, World>();
+        public Dictionary<long, World> WorldsData = new();
         public int DataVersion = 0;
         public int SkillsVersion;
         public int InventoryVersion;
