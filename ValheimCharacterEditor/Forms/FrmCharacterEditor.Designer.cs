@@ -338,12 +338,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarSwim.AutoSize = false;
             this.trackBarSwim.Location = new System.Drawing.Point(118, 557);
             this.trackBarSwim.Maximum = 100;
-            this.trackBarSwim.Minimum = 1;
             this.trackBarSwim.Name = "trackBarSwim";
             this.trackBarSwim.Size = new System.Drawing.Size(423, 32);
             this.trackBarSwim.TabIndex = 45;
             this.trackBarSwim.TickFrequency = 5;
-            this.trackBarSwim.Value = 1;
             this.trackBarSwim.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelRun
@@ -369,12 +367,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarRun.AutoSize = false;
             this.trackBarRun.Location = new System.Drawing.Point(118, 519);
             this.trackBarRun.Maximum = 100;
-            this.trackBarRun.Minimum = 1;
             this.trackBarRun.Name = "trackBarRun";
             this.trackBarRun.Size = new System.Drawing.Size(423, 32);
             this.trackBarRun.TabIndex = 42;
             this.trackBarRun.TickFrequency = 5;
-            this.trackBarRun.Value = 1;
             this.trackBarRun.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelSneak
@@ -400,12 +396,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarSneak.AutoSize = false;
             this.trackBarSneak.Location = new System.Drawing.Point(118, 481);
             this.trackBarSneak.Maximum = 100;
-            this.trackBarSneak.Minimum = 1;
             this.trackBarSneak.Name = "trackBarSneak";
             this.trackBarSneak.Size = new System.Drawing.Size(423, 32);
             this.trackBarSneak.TabIndex = 39;
             this.trackBarSneak.TickFrequency = 5;
-            this.trackBarSneak.Value = 1;
             this.trackBarSneak.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelJump
@@ -431,12 +425,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarJump.AutoSize = false;
             this.trackBarJump.Location = new System.Drawing.Point(118, 443);
             this.trackBarJump.Maximum = 100;
-            this.trackBarJump.Minimum = 1;
             this.trackBarJump.Name = "trackBarJump";
             this.trackBarJump.Size = new System.Drawing.Size(423, 32);
             this.trackBarJump.TabIndex = 36;
             this.trackBarJump.TickFrequency = 5;
-            this.trackBarJump.Value = 1;
             this.trackBarJump.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelWoodcutting
@@ -462,12 +454,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarWoodcutting.AutoSize = false;
             this.trackBarWoodcutting.Location = new System.Drawing.Point(118, 405);
             this.trackBarWoodcutting.Maximum = 100;
-            this.trackBarWoodcutting.Minimum = 1;
             this.trackBarWoodcutting.Name = "trackBarWoodcutting";
             this.trackBarWoodcutting.Size = new System.Drawing.Size(423, 32);
             this.trackBarWoodcutting.TabIndex = 33;
             this.trackBarWoodcutting.TickFrequency = 5;
-            this.trackBarWoodcutting.Value = 1;
             this.trackBarWoodcutting.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelPickaxes
@@ -493,12 +483,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarPickaxes.AutoSize = false;
             this.trackBarPickaxes.Location = new System.Drawing.Point(118, 367);
             this.trackBarPickaxes.Maximum = 100;
-            this.trackBarPickaxes.Minimum = 1;
             this.trackBarPickaxes.Name = "trackBarPickaxes";
             this.trackBarPickaxes.Size = new System.Drawing.Size(423, 32);
             this.trackBarPickaxes.TabIndex = 30;
             this.trackBarPickaxes.TickFrequency = 5;
-            this.trackBarPickaxes.Value = 1;
             this.trackBarPickaxes.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelUnarmed
@@ -524,12 +512,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarUnarmed.AutoSize = false;
             this.trackBarUnarmed.Location = new System.Drawing.Point(118, 329);
             this.trackBarUnarmed.Maximum = 100;
-            this.trackBarUnarmed.Minimum = 1;
             this.trackBarUnarmed.Name = "trackBarUnarmed";
             this.trackBarUnarmed.Size = new System.Drawing.Size(423, 32);
             this.trackBarUnarmed.TabIndex = 27;
             this.trackBarUnarmed.TickFrequency = 5;
-            this.trackBarUnarmed.Value = 1;
             this.trackBarUnarmed.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelBows
@@ -555,12 +541,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarBows.AutoSize = false;
             this.trackBarBows.Location = new System.Drawing.Point(118, 291);
             this.trackBarBows.Maximum = 100;
-            this.trackBarBows.Minimum = 1;
             this.trackBarBows.Name = "trackBarBows";
             this.trackBarBows.Size = new System.Drawing.Size(423, 32);
             this.trackBarBows.TabIndex = 24;
             this.trackBarBows.TickFrequency = 5;
-            this.trackBarBows.Value = 1;
             this.trackBarBows.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelAxes
@@ -586,12 +570,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarAxes.AutoSize = false;
             this.trackBarAxes.Location = new System.Drawing.Point(118, 253);
             this.trackBarAxes.Maximum = 100;
-            this.trackBarAxes.Minimum = 1;
             this.trackBarAxes.Name = "trackBarAxes";
             this.trackBarAxes.Size = new System.Drawing.Size(423, 32);
             this.trackBarAxes.TabIndex = 21;
             this.trackBarAxes.TickFrequency = 5;
-            this.trackBarAxes.Value = 1;
             this.trackBarAxes.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelBlocking
@@ -617,12 +599,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarBlocking.AutoSize = false;
             this.trackBarBlocking.Location = new System.Drawing.Point(118, 215);
             this.trackBarBlocking.Maximum = 100;
-            this.trackBarBlocking.Minimum = 1;
             this.trackBarBlocking.Name = "trackBarBlocking";
             this.trackBarBlocking.Size = new System.Drawing.Size(423, 32);
             this.trackBarBlocking.TabIndex = 18;
             this.trackBarBlocking.TickFrequency = 5;
-            this.trackBarBlocking.Value = 1;
             this.trackBarBlocking.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelSpears
@@ -648,12 +628,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarSpears.AutoSize = false;
             this.trackBarSpears.Location = new System.Drawing.Point(118, 177);
             this.trackBarSpears.Maximum = 100;
-            this.trackBarSpears.Minimum = 1;
             this.trackBarSpears.Name = "trackBarSpears";
             this.trackBarSpears.Size = new System.Drawing.Size(423, 32);
             this.trackBarSpears.TabIndex = 15;
             this.trackBarSpears.TickFrequency = 5;
-            this.trackBarSpears.Value = 1;
             this.trackBarSpears.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelPolearms
@@ -679,12 +657,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarPolearms.AutoSize = false;
             this.trackBarPolearms.Location = new System.Drawing.Point(118, 139);
             this.trackBarPolearms.Maximum = 100;
-            this.trackBarPolearms.Minimum = 1;
             this.trackBarPolearms.Name = "trackBarPolearms";
             this.trackBarPolearms.Size = new System.Drawing.Size(423, 32);
             this.trackBarPolearms.TabIndex = 12;
             this.trackBarPolearms.TickFrequency = 5;
-            this.trackBarPolearms.Value = 1;
             this.trackBarPolearms.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelClubs
@@ -710,12 +686,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarClubs.AutoSize = false;
             this.trackBarClubs.Location = new System.Drawing.Point(118, 101);
             this.trackBarClubs.Maximum = 100;
-            this.trackBarClubs.Minimum = 1;
             this.trackBarClubs.Name = "trackBarClubs";
             this.trackBarClubs.Size = new System.Drawing.Size(423, 32);
             this.trackBarClubs.TabIndex = 9;
             this.trackBarClubs.TickFrequency = 5;
-            this.trackBarClubs.Value = 1;
             this.trackBarClubs.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelKnives
@@ -741,12 +715,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarKnives.AutoSize = false;
             this.trackBarKnives.Location = new System.Drawing.Point(118, 63);
             this.trackBarKnives.Maximum = 100;
-            this.trackBarKnives.Minimum = 1;
             this.trackBarKnives.Name = "trackBarKnives";
             this.trackBarKnives.Size = new System.Drawing.Size(423, 32);
             this.trackBarKnives.TabIndex = 6;
             this.trackBarKnives.TickFrequency = 5;
-            this.trackBarKnives.Value = 1;
             this.trackBarKnives.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // labelSwords
@@ -772,12 +744,10 @@ namespace ValheimCharacterEditor.Forms
             this.trackBarSwords.AutoSize = false;
             this.trackBarSwords.Location = new System.Drawing.Point(118, 25);
             this.trackBarSwords.Maximum = 100;
-            this.trackBarSwords.Minimum = 1;
             this.trackBarSwords.Name = "trackBarSwords";
             this.trackBarSwords.Size = new System.Drawing.Size(423, 32);
             this.trackBarSwords.TabIndex = 3;
             this.trackBarSwords.TickFrequency = 5;
-            this.trackBarSwords.Value = 1;
             this.trackBarSwords.Scroll += new System.EventHandler(this.SkillTrackBar_Scroll);
             // 
             // btnEditInventory
@@ -822,19 +792,9 @@ namespace ValheimCharacterEditor.Forms
             // numSetAll
             // 
             this.numSetAll.Location = new System.Drawing.Point(167, 465);
-            this.numSetAll.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.numSetAll.Name = "numSetAll";
             this.numSetAll.Size = new System.Drawing.Size(111, 21);
             this.numSetAll.TabIndex = 16;
-            this.numSetAll.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.numSetAll.ValueChanged += new System.EventHandler(this.numSetAll_ValueChanged);
             // 
             // FrmCharacterEditor
