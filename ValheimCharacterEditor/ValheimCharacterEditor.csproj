@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmCharacterEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,19 +84,40 @@
     <Compile Include="Forms\FrmInventory.Designer.cs">
       <DependentUpon>FrmInventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmItemEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmItemEditor.Designer.cs">
+      <DependentUpon>FrmItemEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmSaveCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSaveCharacter.Designer.cs">
+      <DependentUpon>FrmSaveCharacter.cs</DependentUpon>
+    </Compile>
     <Compile Include="LastFormClosingApplicationContext.cs" />
+    <Compile Include="Models\BackupResult.cs" />
+    <Compile Include="Models\CharacterDetailsDifference.cs" />
+    <Compile Include="Models\BaseDifference.cs" />
+    <Compile Include="Models\InventoryDifference.cs" />
+    <Compile Include="Models\SkillDifference.cs" />
+    <Compile Include="Models\StringDifference.cs" />
+    <Compile Include="Models\Vector3Difference.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\BinaryStream.cs" />
     <Compile Include="Utilities\CharacterLoader.cs" />
     <Compile Include="Utilities\CharacterParser.cs" />
+    <Compile Include="Utilities\DifferenceReader.cs" />
     <Compile Include="Utilities\Extensions\ArrayExtensions.cs" />
+    <Compile Include="Utilities\Extensions\ItemExtensions.cs" />
     <Compile Include="Utilities\Extensions\Vector3Extensions.cs" />
     <Compile Include="Utilities\FileBrowserTools.cs" />
     <Compile Include="Utilities\ValheimInstanceTools.cs" />
@@ -91,14 +133,23 @@
     <Compile Include="Valheim\SkillNames.cs" />
     <Compile Include="Valheim\Vector3.cs" />
     <Compile Include="Valheim\World.cs" />
+    <EmbeddedResource Include="Forms\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCharacterEditor.resx">
       <DependentUpon>FrmCharacterEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmInventory.resx">
       <DependentUpon>FrmInventory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmItemEditor.resx">
+      <DependentUpon>FrmItemEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSaveCharacter.resx">
+      <DependentUpon>FrmSaveCharacter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1503,6 +1554,17 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

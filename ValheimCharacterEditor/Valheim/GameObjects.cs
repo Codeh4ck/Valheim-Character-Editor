@@ -4,1904 +4,1944 @@ namespace ValheimCharacterEditor.Valheim
 {
     public class GameObjects
     {
-        public static readonly Dictionary<string, GameObjectProperties> ItemProperties =
+        public static Dictionary<string, GameObjectProperties> ItemProperties =
             new Dictionary<string, GameObjectProperties>()
             {
                 {
                     "Amber",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Amber)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Amber)
                 },
                 {
                     "AmberPearl",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.AmberPearl)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.AmberPearl)
                 },
                 {
                     "AncientSeed",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.AncientSeed)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.AncientSeed)
                 },
                 {
                     "ArmorBronzeChest",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorBronzeChest)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.ArmorBronzeChest)
                 },
                 {
                     "ArmorBronzeLegs",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorBronzeLegs)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.ArmorBronzeLegs)
                 },
                 {
                     "ArmorIronChest",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorIronChest)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.ArmorIronChest)
                 },
                 {
                     "ArmorIronLegs",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorIronLegs)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.ArmorIronLegs)
                 },
                 {
                     "ArmorLeatherChest",
-                    new GameObjectProperties(1, 4, 0, 400, 100, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorLeatherChest)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 400,
+                        durabilityPerLevel: 100, craftable: true, displayName: Properties.Resources.ArmorLeatherChest)
                 },
                 {
                     "ArmorLeatherLegs",
-                    new GameObjectProperties(1, 4, 0, 400, 100, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorLeatherLegs)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 400,
+                        durabilityPerLevel: 100, craftable: true, displayName: Properties.Resources.ArmorLeatherLegs)
                 },
                 {
                     "ArmorPaddedCuirass",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorPaddedCuirass)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.ArmorPaddedCuirass)
                 },
                 {
                     "ArmorPaddedGreaves",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorPaddedGreaves)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.ArmorPaddedGreaves)
                 },
                 {
                     "ArmorRagsChest",
-                    new GameObjectProperties(1, 2, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorRagsChest)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 2, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArmorRagsChest)
                 },
                 {
                     "ArmorRagsLegs",
-                    new GameObjectProperties(1, 2, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorRagsLegs)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 2, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArmorRagsLegs)
                 },
                 {
                     "ArmorTrollLeatherChest",
-                    new GameObjectProperties(1, 4, 0, 500, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorTrollLeatherChest)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 500,
+                        durabilityPerLevel: 200, craftable: true,
+                        displayName: Properties.Resources.ArmorTrollLeatherChest)
                 },
                 {
                     "ArmorTrollLeatherLegs",
-                    new GameObjectProperties(1, 4, 0, 500, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorTrollLeatherLegs)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 500,
+                        durabilityPerLevel: 200, craftable: true,
+                        displayName: Properties.Resources.ArmorTrollLeatherLegs)
                 },
                 {
                     "ArmorWolfChest",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorWolfChest)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.ArmorWolfChest)
                 },
                 {
                     "ArmorWolfLegs",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.ArmorWolfLegs)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.ArmorWolfLegs)
                 },
                 {
                     "ArrowBronze",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArrowBronze)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArrowBronze)
                 },
                 {
                     "ArrowFire",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArrowFire)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArrowFire)
                 },
                 {
                     "ArrowFlint",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArrowFlint)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArrowFlint)
                 },
                 {
                     "ArrowFrost",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArrowFrost)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArrowFrost)
                 },
                 {
                     "ArrowIron",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArrowIron)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArrowIron)
                 },
                 {
                     "ArrowNeedle",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArrowNeedle)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArrowNeedle)
                 },
                 {
                     "ArrowObsidian",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArrowObsidian)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArrowObsidian)
                 },
                 {
                     "ArrowPoison",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArrowPoison)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArrowPoison)
                 },
                 {
                     "ArrowSilver",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArrowSilver)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArrowSilver)
                 },
                 {
                     "ArrowWood",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ArrowWood)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ArrowWood)
                 },
                 {
                     "AtgeirBlackmetal",
-                    new GameObjectProperties(1, 4, 0, 175, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.AtgeirBlackmetal)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 175,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.AtgeirBlackmetal)
                 },
                 {
                     "AtgeirBronze",
-                    new GameObjectProperties(1, 4, 0, 125, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.AtgeirBronze)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 125,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.AtgeirBronze)
                 },
                 {
                     "AtgeirIron",
-                    new GameObjectProperties(1, 4, 0, 175, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.AtgeirIron)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 175,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.AtgeirIron)
                 },
                 {
                     "AxeBlackMetal",
-                    new GameObjectProperties(1, 4, 0, 175, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.AxeBlackMetal)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 175,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.AxeBlackMetal)
                 },
                 {
                     "AxeBronze",
-                    new GameObjectProperties(1, 4, 0, 125, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.AxeBronze)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 125,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.AxeBronze)
                 },
                 {
                     "AxeFlint",
-                    new GameObjectProperties(1, 4, 0, 100, 30, true,
-                        ValheimCharacterEditor.Properties.Resources.AxeFlint)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 30, craftable: true, displayName: Properties.Resources.AxeFlint)
                 },
                 {
                     "AxeIron",
-                    new GameObjectProperties(1, 4, 0, 175, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.AxeIron)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 175,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.AxeIron)
                 },
                 {
                     "AxeStone",
-                    new GameObjectProperties(1, 4, 0, 100, 30, true,
-                        ValheimCharacterEditor.Properties.Resources.AxeStone)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 30, craftable: true, displayName: Properties.Resources.AxeStone)
                 },
                 {
                     "Barley",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.Barley)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.Barley)
                 },
                 {
                     "BarleyFlour",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.BarleyFlour)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.BarleyFlour)
                 },
                 {
                     "BarleyWine",
-                    new GameObjectProperties(10, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.BarleyWine)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.BarleyWine)
                 },
                 {
                     "BarleyWineBase",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.BarleyWineBase)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.BarleyWineBase)
                 },
                 {
                     "Battleaxe",
-                    new GameObjectProperties(1, 4, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.Battleaxe)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.Battleaxe)
                 },
                 {
                     "Beard1",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Beard1)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Beard1)
                 },
                 {
                     "Beard10",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Beard10)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Beard10)
                 },
                 {
                     "Beard2",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Beard2)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Beard2)
                 },
                 {
                     "Beard3",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Beard3)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Beard3)
                 },
                 {
                     "Beard4",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Beard4)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Beard4)
                 },
                 {
                     "Beard5",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Beard5)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Beard5)
                 },
                 {
                     "Beard6",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Beard6)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Beard6)
                 },
                 {
                     "Beard7",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Beard7)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Beard7)
                 },
                 {
                     "Beard8",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Beard8)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Beard8)
                 },
                 {
                     "Beard9",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Beard9)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Beard9)
                 },
                 {
                     "BeardNone",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.BeardNone)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.BeardNone)
                 },
                 {
                     "BeechSeeds",
-                    new GameObjectProperties(100, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.BeechSeeds)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.BeechSeeds)
                 },
                 {
                     "BeltStrength",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.BeltStrength)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.BeltStrength)
                 },
                 {
                     "BlackMetal",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.BlackMetal)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.BlackMetal)
                 },
                 {
                     "BlackMetalScrap",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.BlackMetalScrap)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.BlackMetalScrap)
                 },
                 {
                     "blobelite_attack_aoe",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.blobelite_attack_aoe)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.blobelite_attack_aoe)
                 },
                 {
                     "blob_attack_aoe",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.blob_attack_aoe)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.blob_attack_aoe)
                 },
                 {
                     "Bloodbag",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Bloodbag)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Bloodbag)
                 },
                 {
                     "BloodPudding",
-                    new GameObjectProperties(10, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.BloodPudding)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.BloodPudding)
                 },
                 {
                     "Blueberries",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Blueberries)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Blueberries)
                 },
                 {
                     "boar_base_attack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.boar_base_attack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.boar_base_attack)
                 },
                 {
                     "BombOoze",
-                    new GameObjectProperties(50, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.BombOoze)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.BombOoze)
                 },
                 {
                     "BoneFragments",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.BoneFragments)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.BoneFragments)
                 },
                 {
                     "bonemass_attack_aoe",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.bonemass_attack_aoe)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.bonemass_attack_aoe)
                 },
                 {
                     "bonemass_attack_punch",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.bonemass_attack_punch)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.bonemass_attack_punch)
                 },
                 {
                     "bonemass_attack_spawn",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.bonemass_attack_spawn)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.bonemass_attack_spawn)
                 },
                 {
                     "bonemass_attack_throw",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.bonemass_attack_throw)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.bonemass_attack_throw)
                 },
                 {
                     "Bow",
-                    new GameObjectProperties(1, 4, 0, 50, 50, true, ValheimCharacterEditor.Properties.Resources.Bow)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 50,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.Bow)
                 },
                 {
                     "BowDraugrFang",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.BowDraugrFang)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.BowDraugrFang)
                 },
                 {
                     "BowFineWood",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.BowFineWood)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.BowFineWood)
                 },
                 {
                     "BowHuntsman",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.BowHuntsman)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.BowHuntsman)
                 },
                 {
                     "Bread",
-                    new GameObjectProperties(20, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.Bread)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.Bread)
                 },
                 {
                     "Bronze",
-                    new GameObjectProperties(30, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.Bronze)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.Bronze)
                 },
                 {
                     "BronzeNails",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.BronzeNails)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.BronzeNails)
                 },
                 {
                     "CapeDeerHide",
-                    new GameObjectProperties(1, 4, 0, 400, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.CapeDeerHide)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 400,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.CapeDeerHide)
                 },
                 {
                     "CapeLinen",
-                    new GameObjectProperties(1, 4, 6, 1500, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.CapeLinen)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 6, maxDurability: 1500,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.CapeLinen)
                 },
                 {
                     "CapeLox",
-                    new GameObjectProperties(1, 4, 0, 1200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.CapeLox)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.CapeLox)
                 },
                 {
                     "CapeOdin",
-                    new GameObjectProperties(1, 4, 1, 1500, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.CapeOdin)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 1, maxDurability: 1500,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.CapeOdin)
                 },
                 {
                     "CapeTest",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.CapeTest)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.CapeTest)
                 },
                 {
                     "CapeTrollHide",
-                    new GameObjectProperties(1, 4, 0, 500, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.CapeTrollHide)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 500,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.CapeTrollHide)
                 },
                 {
                     "CapeWolf",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.CapeWolf)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.CapeWolf)
                 },
                 {
                     "Carrot",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Carrot)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Carrot)
                 },
                 {
                     "CarrotSeeds",
-                    new GameObjectProperties(100, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.CarrotSeeds)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.CarrotSeeds)
                 },
                 {
                     "CarrotSoup",
-                    new GameObjectProperties(10, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.CarrotSoup)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.CarrotSoup)
                 },
                 {
                     "Chain",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Chain)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Chain)
                 },
                 {
                     "Chitin",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Chitin)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Chitin)
                 },
                 {
                     "Cloudberry",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Cloudberry)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Cloudberry)
                 },
                 {
                     "Club",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.Club)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.Club)
                 },
                 {
                     "Coal",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Coal)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Coal)
                 },
                 {
                     "Coins",
-                    new GameObjectProperties(999, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Coins)
+                    new GameObjectProperties(maxStackSize: 999, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Coins)
                 },
                 {
                     "CookedLoxMeat",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.CookedLoxMeat)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.CookedLoxMeat)
                 },
                 {
                     "CookedMeat",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.CookedMeat)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.CookedMeat)
                 },
                 {
                     "Copper",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Copper)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Copper)
                 },
                 {
                     "CopperOre",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.CopperOre)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.CopperOre)
                 },
                 {
                     "CryptKey",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.CryptKey)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.CryptKey)
                 },
                 {
                     "Crystal",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Crystal)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Crystal)
                 },
                 {
                     "Cultivator",
-                    new GameObjectProperties(1, 3, 0, 200, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.Cultivator)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.Cultivator)
                 },
                 {
                     "Dandelion",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Dandelion)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Dandelion)
                 },
                 {
                     "Deathsquito_sting",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Deathsquito_sting)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Deathsquito_sting)
                 },
                 {
                     "DeerHide",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.DeerHide)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.DeerHide)
                 },
                 {
                     "DragonEgg",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.DragonEgg)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.DragonEgg)
                 },
                 {
                     "DragonTear",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.DragonTear)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.DragonTear)
                 },
                 {
                     "dragon_bite",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.dragon_bite)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.dragon_bite)
                 },
                 {
                     "dragon_claw_left",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.dragon_claw_left)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.dragon_claw_left)
                 },
                 {
                     "dragon_claw_right",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.dragon_claw_right)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.dragon_claw_right)
                 },
                 {
                     "dragon_coldbreath",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.dragon_coldbreath)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.dragon_coldbreath)
                 },
                 {
                     "dragon_coldbreath_OLD",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.dragon_coldbreath_OLD)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.dragon_coldbreath_OLD)
                 },
                 {
                     "dragon_spit_shotgun",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.dragon_spit_shotgun)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.dragon_spit_shotgun)
                 },
                 {
                     "dragon_taunt",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.dragon_taunt)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.dragon_taunt)
                 },
                 {
                     "draugr_arrow",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.draugr_arrow)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.draugr_arrow)
                 },
                 {
                     "draugr_axe",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.draugr_axe)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.draugr_axe)
                 },
                 {
                     "draugr_bow",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.draugr_bow)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.draugr_bow)
                 },
                 {
                     "draugr_sword",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.draugr_sword)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.draugr_sword)
                 },
                 {
                     "Eikthyr_antler",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Eikthyr_antler)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Eikthyr_antler)
                 },
                 {
                     "Eikthyr_charge",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Eikthyr_charge)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Eikthyr_charge)
                 },
                 {
                     "Eikthyr_flegs_OLD",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Eikthyr_flegs_OLD)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Eikthyr_flegs_OLD)
                 },
                 {
                     "Eikthyr_stomp",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Eikthyr_stomp)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Eikthyr_stomp)
                 },
                 {
                     "ElderBark",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.ElderBark)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.ElderBark)
                 },
                 {
                     "Entrails",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Entrails)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Entrails)
                 },
                 {
                     "Feathers",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Feathers)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Feathers)
                 },
                 {
                     "Fenring_attack_claw",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Fenring_attack_claw)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Fenring_attack_claw)
                 },
                 {
                     "Fenring_attack_jump",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Fenring_attack_jump)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Fenring_attack_jump)
                 },
                 {
                     "Fenring_taunt",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Fenring_taunt)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Fenring_taunt)
                 },
                 {
                     "FineWood",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.FineWood)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.FineWood)
                 },
                 {
                     "FirCone",
-                    new GameObjectProperties(100, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.FirCone)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.FirCone)
                 },
                 {
                     "FishCooked",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.FishCooked)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.FishCooked)
                 },
                 {
                     "FishingBait",
-                    new GameObjectProperties(100, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.FishingBait)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.FishingBait)
                 },
                 {
                     "FishingRod",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.FishingRod)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.FishingRod)
                 },
                 {
                     "FishRaw",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.FishRaw)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.FishRaw)
                 },
                 {
                     "FishWraps",
-                    new GameObjectProperties(10, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.FishWraps)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.FishWraps)
                 },
                 {
                     "Flametal",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Flametal)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Flametal)
                 },
                 {
                     "FlametalOre",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.FlametalOre)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.FlametalOre)
                 },
                 {
                     "Flax",
-                    new GameObjectProperties(100, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Flax)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Flax)
                 },
                 {
                     "Flint",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Flint)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Flint)
                 },
                 {
                     "FreezeGland",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.FreezeGland)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.FreezeGland)
                 },
                 {
                     "gd_king_punch",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.gd_king_punch)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.gd_king_punch)
                 },
                 {
                     "gd_king_rootspawn",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.gd_king_rootspawn)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.gd_king_rootspawn)
                 },
                 {
                     "gd_king_scream",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.gd_king_scream)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.gd_king_scream)
                 },
                 {
                     "gd_king_shoot",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.gd_king_shoot)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.gd_king_shoot)
                 },
                 {
                     "gd_king_stomp",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.gd_king_stomp)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.gd_king_stomp)
                 },
                 {
                     "Ghost_attack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Ghost_attack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Ghost_attack)
                 },
                 {
                     "GoblinArmband",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinArmband)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinArmband)
                 },
                 {
                     "GoblinBrute_ArmGuard",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinBrute_ArmGuard)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinBrute_ArmGuard)
                 },
                 {
                     "GoblinBrute_Attack",
-                    new GameObjectProperties(1, 7, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinBrute_Attack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 7, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinBrute_Attack)
                 },
                 {
                     "GoblinBrute_Backbones",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinBrute_Backbones)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinBrute_Backbones)
                 },
                 {
                     "GoblinBrute_ExecutionerCap",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinBrute_ExecutionerCap)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinBrute_ExecutionerCap)
                 },
                 {
                     "GoblinBrute_HipCloth",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinBrute_HipCloth)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinBrute_HipCloth)
                 },
                 {
                     "GoblinBrute_LegBones",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinBrute_LegBones)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinBrute_LegBones)
                 },
                 {
                     "GoblinBrute_RageAttack",
-                    new GameObjectProperties(1, 7, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinBrute_RageAttack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 7, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinBrute_RageAttack)
                 },
                 {
                     "GoblinBrute_ShoulderGuard",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinBrute_ShoulderGuard)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinBrute_ShoulderGuard)
                 },
                 {
                     "GoblinBrute_Taunt",
-                    new GameObjectProperties(1, 7, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinBrute_Taunt)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 7, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinBrute_Taunt)
                 },
                 {
                     "GoblinClub",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinClub)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinClub)
                 },
                 {
                     "GoblinHelmet",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinHelmet)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinHelmet)
                 },
                 {
                     "GoblinKing_Beam",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinKing_Beam)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinKing_Beam)
                 },
                 {
                     "GoblinKing_Meteors",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinKing_Meteors)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinKing_Meteors)
                 },
                 {
                     "GoblinKing_Nova",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinKing_Nova)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinKing_Nova)
                 },
                 {
                     "GoblinKing_Taunt",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinKing_Taunt)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinKing_Taunt)
                 },
                 {
                     "GoblinLegband",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinLegband)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinLegband)
                 },
                 {
                     "GoblinLoin",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinLoin)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinLoin)
                 },
                 {
                     "GoblinShaman_attack_fireball",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinShaman_attack_fireball)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinShaman_attack_fireball)
                 },
                 {
                     "GoblinShaman_attack_poke",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinShaman_attack_poke)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinShaman_attack_poke)
                 },
                 {
                     "GoblinShaman_attack_protect",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinShaman_attack_protect)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinShaman_attack_protect)
                 },
                 {
                     "GoblinShaman_Headdress_antlers",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinShaman_Headdress_antlers)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinShaman_Headdress_antlers)
                 },
                 {
                     "GoblinShaman_Headdress_feathers",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinShaman_Headdress_feathers)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinShaman_Headdress_feathers)
                 },
                 {
                     "GoblinShaman_Staff_Bones",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinShaman_Staff_Bones)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinShaman_Staff_Bones)
                 },
                 {
                     "GoblinShaman_Staff_Feathers",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinShaman_Staff_Feathers)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.GoblinShaman_Staff_Feathers)
                 },
                 {
                     "GoblinShoulders",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinShoulders)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinShoulders)
                 },
                 {
                     "GoblinSpear",
-                    new GameObjectProperties(10, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinSpear)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinSpear)
                 },
                 {
                     "GoblinSword",
-                    new GameObjectProperties(1, 7, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinSword)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 7, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinSword)
                 },
                 {
                     "GoblinTorch",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinTorch)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinTorch)
                 },
                 {
                     "GoblinTotem",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GoblinTotem)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GoblinTotem)
                 },
                 {
                     "GreydwarfEye",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.GreydwarfEye)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.GreydwarfEye)
                 },
                 {
                     "Greydwarf_attack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Greydwarf_attack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Greydwarf_attack)
                 },
                 {
                     "Greydwarf_elite_attack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Greydwarf_elite_attack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.Greydwarf_elite_attack)
                 },
                 {
                     "Greydwarf_shaman_attack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Greydwarf_shaman_attack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.Greydwarf_shaman_attack)
                 },
                 {
                     "Greydwarf_shaman_heal",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Greydwarf_shaman_heal)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.Greydwarf_shaman_heal)
                 },
                 {
                     "Greydwarf_throw",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Greydwarf_throw)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Greydwarf_throw)
                 },
                 {
                     "Greyling_attack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Greyling_attack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Greyling_attack)
                 },
                 {
                     "Guck",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Guck)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Guck)
                 },
                 {
                     "Hair1",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair1)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair1)
                 },
                 {
                     "Hair10",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair10)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair10)
                 },
                 {
                     "Hair11",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair11)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair11)
                 },
                 {
                     "Hair12",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair12)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair12)
                 },
                 {
                     "Hair13",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair13)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair13)
                 },
                 {
                     "Hair14",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair14)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair14)
                 },
                 {
                     "Hair2",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair2)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair2)
                 },
                 {
                     "Hair3",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair3)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair3)
                 },
                 {
                     "Hair4",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair4)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair4)
                 },
                 {
                     "Hair5",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair5)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair5)
                 },
                 {
                     "Hair6",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair6)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair6)
                 },
                 {
                     "Hair7",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair7)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair7)
                 },
                 {
                     "Hair8",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair8)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair8)
                 },
                 {
                     "Hair9",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Hair9)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Hair9)
                 },
                 {
                     "HairNone",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.HairNone)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.HairNone)
                 },
                 {
                     "Hammer",
-                    new GameObjectProperties(1, 3, 0, 100, 100, true,
-                        ValheimCharacterEditor.Properties.Resources.Hammer)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 100, craftable: true, displayName: Properties.Resources.Hammer)
                 },
                 {
                     "HardAntler",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.HardAntler)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.HardAntler)
                 },
                 {
                     "hatchling_spit_cold",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.hatchling_spit_cold)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.hatchling_spit_cold)
                 },
                 {
                     "HealthUpgrade_Bonemass",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.HealthUpgrade_Bonemass)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.HealthUpgrade_Bonemass)
                 },
                 {
                     "HealthUpgrade_GDKing",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.HealthUpgrade_GDKing)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.HealthUpgrade_GDKing)
                 },
                 {
                     "HelmetBronze",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.HelmetBronze)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.HelmetBronze)
                 },
                 {
                     "HelmetDrake",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.HelmetDrake)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.HelmetDrake)
                 },
                 {
                     "HelmetDverger",
-                    new GameObjectProperties(1, 1, 0, 1000, 100, true,
-                        ValheimCharacterEditor.Properties.Resources.HelmetDverger)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 100, craftable: true, displayName: Properties.Resources.HelmetDverger)
                 },
                 {
                     "HelmetIron",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.HelmetIron)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.HelmetIron)
                 },
                 {
                     "HelmetLeather",
-                    new GameObjectProperties(1, 4, 0, 400, 100, true,
-                        ValheimCharacterEditor.Properties.Resources.HelmetLeather)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 400,
+                        durabilityPerLevel: 100, craftable: true, displayName: Properties.Resources.HelmetLeather)
                 },
                 {
                     "HelmetOdin",
-                    new GameObjectProperties(1, 4, 0, 300, 100, true,
-                        ValheimCharacterEditor.Properties.Resources.HelmetOdin)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 300,
+                        durabilityPerLevel: 100, craftable: true, displayName: Properties.Resources.HelmetOdin)
                 },
                 {
                     "HelmetPadded",
-                    new GameObjectProperties(1, 4, 0, 1000, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.HelmetPadded)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.HelmetPadded)
                 },
                 {
                     "HelmetTrollLeather",
-                    new GameObjectProperties(1, 4, 0, 500, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.HelmetTrollLeather)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 500,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.HelmetTrollLeather)
                 },
                 {
                     "HelmetYule",
-                    new GameObjectProperties(1, 1, 0, 1000, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.HelmetYule)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 1000,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.HelmetYule)
                 },
                 {
                     "Hoe",
-                    new GameObjectProperties(1, 3, 0, 200, 200, true,
-                        ValheimCharacterEditor.Properties.Resources.Hoe)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 200, craftable: true, displayName: Properties.Resources.Hoe)
                 },
                 {
                     "Honey",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Honey)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Honey)
                 },
                 {
                     "imp_fireball_attack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.imp_fireball_attack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.imp_fireball_attack)
                 },
                 {
                     "Iron",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Iron)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Iron)
                 },
                 {
                     "IronNails",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.IronNails)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.IronNails)
                 },
                 {
                     "IronOre",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.IronOre)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.IronOre)
                 },
                 {
                     "IronScrap",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.IronScrap)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.IronScrap)
                 },
                 {
                     "KnifeBlackMetal",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.KnifeBlackMetal)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.KnifeBlackMetal)
                 },
                 {
                     "KnifeChitin",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.KnifeChitin)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.KnifeChitin)
                 },
                 {
                     "KnifeCopper",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.KnifeCopper)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.KnifeCopper)
                 },
                 {
                     "KnifeFlint",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.KnifeFlint)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.KnifeFlint)
                 },
                 {
                     "LeatherScraps",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.LeatherScraps)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.LeatherScraps)
                 },
                 {
                     "Leech_BiteAttack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Leech_BiteAttack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Leech_BiteAttack)
                 },
                 {
                     "LinenThread",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.LinenThread)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.LinenThread)
                 },
                 {
                     "LoxMeat",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.LoxMeat)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.LoxMeat)
                 },
                 {
                     "LoxPelt",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.LoxPelt)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.LoxPelt)
                 },
                 {
                     "LoxPie",
-                    new GameObjectProperties(10, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.LoxPie)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.LoxPie)
                 },
                 {
                     "lox_bite",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.lox_bite)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.lox_bite)
                 },
                 {
                     "lox_stomp",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.lox_stomp)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.lox_stomp)
                 },
                 {
                     "MaceBronze",
-                    new GameObjectProperties(1, 4, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MaceBronze)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MaceBronze)
                 },
                 {
                     "MaceIron",
-                    new GameObjectProperties(1, 4, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MaceIron)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MaceIron)
                 },
                 {
                     "MaceNeedle",
-                    new GameObjectProperties(1, 4, 0, 150, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MaceNeedle)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 150,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MaceNeedle)
                 },
                 {
                     "MaceSilver",
-                    new GameObjectProperties(1, 4, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MaceSilver)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MaceSilver)
                 },
                 {
                     "MeadBaseFrostResist",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MeadBaseFrostResist)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MeadBaseFrostResist)
                 },
                 {
                     "MeadBaseHealthMedium",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MeadBaseHealthMedium)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MeadBaseHealthMedium)
                 },
                 {
                     "MeadBaseHealthMinor",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MeadBaseHealthMinor)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MeadBaseHealthMinor)
                 },
                 {
                     "MeadBasePoisonResist",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MeadBasePoisonResist)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MeadBasePoisonResist)
                 },
                 {
                     "MeadBaseStaminaMedium",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MeadBaseStaminaMedium)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true,
+                        displayName: Properties.Resources.MeadBaseStaminaMedium)
                 },
                 {
                     "MeadBaseStaminaMinor",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MeadBaseStaminaMinor)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MeadBaseStaminaMinor)
                 },
                 {
                     "MeadBaseTasty",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MeadBaseTasty)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MeadBaseTasty)
                 },
                 {
                     "MeadFrostResist",
-                    new GameObjectProperties(10, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.MeadFrostResist)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.MeadFrostResist)
                 },
                 {
                     "MeadHealthMedium",
-                    new GameObjectProperties(10, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.MeadHealthMedium)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.MeadHealthMedium)
                 },
                 {
                     "MeadHealthMinor",
-                    new GameObjectProperties(10, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.MeadHealthMinor)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.MeadHealthMinor)
                 },
                 {
                     "MeadPoisonResist",
-                    new GameObjectProperties(10, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.MeadPoisonResist)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.MeadPoisonResist)
                 },
                 {
                     "MeadStaminaMedium",
-                    new GameObjectProperties(10, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.MeadStaminaMedium)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.MeadStaminaMedium)
                 },
                 {
                     "MeadStaminaMinor",
-                    new GameObjectProperties(10, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.MeadStaminaMinor)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.MeadStaminaMinor)
                 },
                 {
                     "MeadTasty",
-                    new GameObjectProperties(10, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.MeadTasty)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.MeadTasty)
                 },
                 {
                     "Mushroom",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Mushroom)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Mushroom)
                 },
                 {
                     "MushroomBlue",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.MushroomBlue)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.MushroomBlue)
                 },
                 {
                     "MushroomYellow",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.MushroomYellow)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.MushroomYellow)
                 },
                 {
                     "NeckTail",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.NeckTail)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.NeckTail)
                 },
                 {
                     "NeckTailGrilled",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.NeckTailGrilled)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.NeckTailGrilled)
                 },
                 {
                     "Neck_BiteAttack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Neck_BiteAttack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Neck_BiteAttack)
                 },
                 {
                     "Needle",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Needle)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Needle)
                 },
                 {
                     "Obsidian",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Obsidian)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Obsidian)
                 },
                 {
                     "Ooze",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Ooze)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Ooze)
                 },
                 {
                     "PickaxeAntler",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.PickaxeAntler)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.PickaxeAntler)
                 },
                 {
                     "PickaxeBronze",
-                    new GameObjectProperties(1, 4, 0, 120, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.PickaxeBronze)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 120,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.PickaxeBronze)
                 },
                 {
                     "PickaxeIron",
-                    new GameObjectProperties(1, 4, 0, 150, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.PickaxeIron)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 150,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.PickaxeIron)
                 },
                 {
                     "PickaxeStone",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.PickaxeStone)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.PickaxeStone)
                 },
                 {
                     "PineCone",
-                    new GameObjectProperties(100, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.PineCone)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.PineCone)
                 },
                 {
                     "PlayerUnarmed",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.PlayerUnarmed)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.PlayerUnarmed)
                 },
                 {
                     "QueenBee",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.QueenBee)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.QueenBee)
                 },
                 {
                     "QueensJam",
-                    new GameObjectProperties(10, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.QueensJam)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.QueensJam)
                 },
                 {
                     "Raspberry",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Raspberry)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Raspberry)
                 },
                 {
                     "RawMeat",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.RawMeat)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.RawMeat)
                 },
                 {
                     "Resin",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Resin)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Resin)
                 },
                 {
                     "RoundLog",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.RoundLog)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.RoundLog)
                 },
                 {
                     "Ruby",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Ruby)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Ruby)
                 },
                 {
                     "Sausages",
-                    new GameObjectProperties(20, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.Sausages)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.Sausages)
                 },
                 {
                     "SerpentMeat",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.SerpentMeat)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.SerpentMeat)
                 },
                 {
                     "SerpentMeatCooked",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.SerpentMeatCooked)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.SerpentMeatCooked)
                 },
                 {
                     "SerpentScale",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.SerpentScale)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.SerpentScale)
                 },
                 {
                     "SerpentStew",
-                    new GameObjectProperties(10, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SerpentStew)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SerpentStew)
                 },
                 {
                     "Serpent_attack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Serpent_attack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Serpent_attack)
                 },
                 {
                     "Serpent_taunt",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Serpent_taunt)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Serpent_taunt)
                 },
                 {
                     "SharpeningStone",
-                    new GameObjectProperties(20, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SharpeningStone)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SharpeningStone)
                 },
                 {
                     "ShieldBanded",
-                    new GameObjectProperties(1, 3, 4, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldBanded)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 4, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ShieldBanded)
                 },
                 {
                     "ShieldBlackmetal",
-                    new GameObjectProperties(1, 3, 7, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldBlackmetal)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 7, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ShieldBlackmetal)
                 },
                 {
                     "ShieldBlackmetalTower",
-                    new GameObjectProperties(1, 3, 7, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldBlackmetalTower)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 7, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true,
+                        displayName: Properties.Resources.ShieldBlackmetalTower)
                 },
                 {
                     "ShieldBronzeBuckler",
-                    new GameObjectProperties(1, 3, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldBronzeBuckler)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ShieldBronzeBuckler)
                 },
                 {
                     "ShieldIronSquare",
-                    new GameObjectProperties(1, 3, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldIronSquare)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ShieldIronSquare)
                 },
                 {
                     "ShieldIronTower",
-                    new GameObjectProperties(1, 3, 7, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldIronTower)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 7, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ShieldIronTower)
                 },
                 {
                     "ShieldKnight",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldKnight)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ShieldKnight)
                 },
                 {
                     "ShieldSerpentscale",
-                    new GameObjectProperties(1, 3, 0, 250, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldSerpentscale)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 0, maxDurability: 250,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ShieldSerpentscale)
                 },
                 {
                     "ShieldSilver",
-                    new GameObjectProperties(1, 3, 7, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldSilver)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 7, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ShieldSilver)
                 },
                 {
                     "ShieldWood",
-                    new GameObjectProperties(1, 3, 4, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldWood)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 4, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ShieldWood)
                 },
                 {
                     "ShieldWoodTower",
-                    new GameObjectProperties(1, 3, 7, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.ShieldWoodTower)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 3, maxVariants: 7, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.ShieldWoodTower)
                 },
                 {
                     "Silver",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Silver)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Silver)
                 },
                 {
                     "SilverNecklace",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.SilverNecklace)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.SilverNecklace)
                 },
                 {
                     "SilverOre",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.SilverOre)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.SilverOre)
                 },
                 {
                     "skeleton_bow",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.skeleton_bow)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.skeleton_bow)
                 },
                 {
                     "skeleton_mace",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.skeleton_mace)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.skeleton_mace)
                 },
                 {
                     "skeleton_sword",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.skeleton_sword)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.skeleton_sword)
                 },
                 {
                     "SledgeCheat",
-                    new GameObjectProperties(1, 4, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.SledgeCheat)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.SledgeCheat)
                 },
                 {
                     "SledgeIron",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SledgeIron)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SledgeIron)
                 },
                 {
                     "SledgeStagbreaker",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SledgeStagbreaker)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SledgeStagbreaker)
                 },
                 {
                     "SpearBronze",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SpearBronze)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SpearBronze)
                 },
                 {
                     "SpearChitin",
-                    new GameObjectProperties(1, 1, 0, 50, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SpearChitin)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 50,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SpearChitin)
                 },
                 {
                     "SpearElderbark",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SpearElderbark)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SpearElderbark)
                 },
                 {
                     "SpearFlint",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SpearFlint)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SpearFlint)
                 },
                 {
                     "SpearWolfFang",
-                    new GameObjectProperties(1, 4, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SpearWolfFang)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SpearWolfFang)
                 },
                 {
                     "StaminaUpgrade_Greydwarf",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.StaminaUpgrade_Greydwarf)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.StaminaUpgrade_Greydwarf)
                 },
                 {
                     "StaminaUpgrade_Troll",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.StaminaUpgrade_Troll)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.StaminaUpgrade_Troll)
                 },
                 {
                     "StaminaUpgrade_Wraith",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.StaminaUpgrade_Wraith)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.StaminaUpgrade_Wraith)
                 },
                 {
                     "Stone",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Stone)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Stone)
                 },
                 {
                     "stonegolem_attack1_spike",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.stonegolem_attack1_spike)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.stonegolem_attack1_spike)
                 },
                 {
                     "stonegolem_attack2_left_groundslam",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.stonegolem_attack2_left_groundslam)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.stonegolem_attack2_left_groundslam)
                 },
                 {
                     "stonegolem_attack3_spikesweep",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.stonegolem_attack3_spikesweep)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.stonegolem_attack3_spikesweep)
                 },
                 {
                     "stonegolem_attack_doublesmash",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.stonegolem_attack_doublesmash)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.stonegolem_attack_doublesmash)
                 },
                 {
                     "stonegolem_attack_sonicboom_NOTUSED",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.stonegolem_attack_sonicboom_NOTUSED)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.stonegolem_attack_sonicboom_NOTUSED)
                 },
                 {
                     "StoneGolem_clubs",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.StoneGolem_clubs)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.StoneGolem_clubs)
                 },
                 {
                     "StoneGolem_hat",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.StoneGolem_hat)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.StoneGolem_hat)
                 },
                 {
                     "StoneGolem_spikes",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.StoneGolem_spikes)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.StoneGolem_spikes)
                 },
                 {
                     "SurtlingCore",
-                    new GameObjectProperties(10, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.SurtlingCore)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.SurtlingCore)
                 },
                 {
                     "SwordBlackmetal",
-                    new GameObjectProperties(1, 4, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SwordBlackmetal)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SwordBlackmetal)
                 },
                 {
                     "SwordBronze",
-                    new GameObjectProperties(1, 4, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SwordBronze)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SwordBronze)
                 },
                 {
                     "SwordCheat",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SwordCheat)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SwordCheat)
                 },
                 {
                     "SwordIron",
-                    new GameObjectProperties(1, 4, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SwordIron)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SwordIron)
                 },
                 {
                     "SwordIronFire",
-                    new GameObjectProperties(1, 4, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SwordIronFire)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SwordIronFire)
                 },
                 {
                     "SwordSilver",
-                    new GameObjectProperties(1, 4, 0, 200, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.SwordSilver)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 4, maxVariants: 0, maxDurability: 200,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.SwordSilver)
                 },
                 {
                     "Tankard",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.Tankard)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.Tankard)
                 },
                 {
                     "TankardOdin",
-                    new GameObjectProperties(1, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.TankardOdin)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.TankardOdin)
                 },
                 {
                     "tentaroot_attack",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.tentaroot_attack)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.tentaroot_attack)
                 },
                 {
                     "Thistle",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Thistle)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Thistle)
                 },
                 {
                     "Tin",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Tin)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Tin)
                 },
                 {
                     "TinOre",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TinOre)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TinOre)
                 },
                 {
                     "Torch",
-                    new GameObjectProperties(1, 1, 0, 20, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.Torch)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 20,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.Torch)
                 },
                 {
                     "TrollHide",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrollHide)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrollHide)
                 },
                 {
                     "troll_groundslam",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.troll_groundslam)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.troll_groundslam)
                 },
                 {
                     "troll_log_swing_h",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.troll_log_swing_h)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.troll_log_swing_h)
                 },
                 {
                     "troll_log_swing_v",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.troll_log_swing_v)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.troll_log_swing_v)
                 },
                 {
                     "troll_punch",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.troll_punch)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.troll_punch)
                 },
                 {
                     "troll_throw",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.troll_throw)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.troll_throw)
                 },
                 {
                     "TrophyBlob",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyBlob)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyBlob)
                 },
                 {
                     "TrophyBoar",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyBoar)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyBoar)
                 },
                 {
                     "TrophyBonemass",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyBonemass)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyBonemass)
                 },
                 {
                     "TrophyDeathsquito",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyDeathsquito)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyDeathsquito)
                 },
                 {
                     "TrophyDeer",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyDeer)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyDeer)
                 },
                 {
                     "TrophyDragonQueen",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyDragonQueen)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyDragonQueen)
                 },
                 {
                     "TrophyDraugr",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyDraugr)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyDraugr)
                 },
                 {
                     "TrophyDraugrElite",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyDraugrElite)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyDraugrElite)
                 },
                 {
                     "TrophyDraugrFem",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyDraugrFem)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyDraugrFem)
                 },
                 {
                     "TrophyEikthyr",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyEikthyr)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyEikthyr)
                 },
                 {
                     "TrophyFenring",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyFenring)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyFenring)
                 },
                 {
                     "TrophyForestTroll",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyForestTroll)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyForestTroll)
                 },
                 {
                     "TrophyFrostTroll",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyFrostTroll)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyFrostTroll)
                 },
                 {
                     "TrophyGoblin",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyGoblin)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyGoblin)
                 },
                 {
                     "TrophyGoblinBrute",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyGoblinBrute)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyGoblinBrute)
                 },
                 {
                     "TrophyGoblinKing",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyGoblinKing)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyGoblinKing)
                 },
                 {
                     "TrophyGoblinShaman",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyGoblinShaman)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyGoblinShaman)
                 },
                 {
                     "TrophyGreydwarf",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyGreydwarf)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyGreydwarf)
                 },
                 {
                     "TrophyGreydwarfBrute",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyGreydwarfBrute)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.TrophyGreydwarfBrute)
                 },
                 {
                     "TrophyGreydwarfShaman",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyGreydwarfShaman)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.TrophyGreydwarfShaman)
                 },
                 {
                     "TrophyHatchling",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyHatchling)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyHatchling)
                 },
                 {
                     "TrophyLeech",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyLeech)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyLeech)
                 },
                 {
                     "TrophyLox",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyLox)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyLox)
                 },
                 {
                     "TrophyNeck",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyNeck)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyNeck)
                 },
                 {
                     "TrophySerpent",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophySerpent)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophySerpent)
                 },
                 {
                     "TrophySGolem",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophySGolem)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophySGolem)
                 },
                 {
                     "TrophySkeleton",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophySkeleton)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophySkeleton)
                 },
                 {
                     "TrophySkeletonPoison",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophySkeletonPoison)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.TrophySkeletonPoison)
                 },
                 {
                     "TrophySurtling",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophySurtling)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophySurtling)
                 },
                 {
                     "TrophyTheElder",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyTheElder)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyTheElder)
                 },
                 {
                     "TrophyWolf",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyWolf)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyWolf)
                 },
                 {
                     "TrophyWraith",
-                    new GameObjectProperties(20, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TrophyWraith)
+                    new GameObjectProperties(maxStackSize: 20, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TrophyWraith)
                 },
                 {
                     "Turnip",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Turnip)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Turnip)
                 },
                 {
                     "TurnipSeeds",
-                    new GameObjectProperties(100, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.TurnipSeeds)
+                    new GameObjectProperties(maxStackSize: 100, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.TurnipSeeds)
                 },
                 {
                     "TurnipStew",
-                    new GameObjectProperties(10, 1, 0, 100, 50, true,
-                        ValheimCharacterEditor.Properties.Resources.TurnipStew)
+                    new GameObjectProperties(maxStackSize: 10, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: true, displayName: Properties.Resources.TurnipStew)
                 },
                 {
                     "VegvisirShard_Bonemass",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.VegvisirShard_Bonemass)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false,
+                        displayName: Properties.Resources.VegvisirShard_Bonemass)
                 },
                 {
                     "Wishbone",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Wishbone)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Wishbone)
                 },
                 {
                     "WitheredBone",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.WitheredBone)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.WitheredBone)
                 },
                 {
                     "WolfFang",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.WolfFang)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.WolfFang)
                 },
                 {
                     "WolfPelt",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.WolfPelt)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.WolfPelt)
                 },
                 {
                     "Wolf_Attack1",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Wolf_Attack1)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Wolf_Attack1)
                 },
                 {
                     "Wolf_Attack2",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Wolf_Attack2)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Wolf_Attack2)
                 },
                 {
                     "Wolf_Attack3",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Wolf_Attack3)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Wolf_Attack3)
                 },
                 {
                     "Wood",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.Wood)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.Wood)
                 },
                 {
                     "wraith_melee",
-                    new GameObjectProperties(1, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.wraith_melee)
+                    new GameObjectProperties(maxStackSize: 1, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.wraith_melee)
                 },
                 {
                     "YagluthDrop",
-                    new GameObjectProperties(30, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.YagluthDrop)
+                    new GameObjectProperties(maxStackSize: 30, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.YagluthDrop)
                 },
                 {
                     "YmirRemains",
-                    new GameObjectProperties(50, 1, 0, 100, 50, false,
-                        ValheimCharacterEditor.Properties.Resources.YmirRemains)
+                    new GameObjectProperties(maxStackSize: 50, maxQuality: 1, maxVariants: 0, maxDurability: 100,
+                        durabilityPerLevel: 50, craftable: false, displayName: Properties.Resources.YmirRemains)
                 }
             };
-
     }
 }
