@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using ValheimCharacterEditor.Utilities.Extensions;
 using ValheimCharacterEditor.Valheim;
 
 namespace ValheimCharacterEditor.Forms
@@ -11,7 +12,7 @@ namespace ValheimCharacterEditor.Forms
     public partial class FrmInventory : Form
     {
         // TODO: Replace this ugly thing with mathematical calculation
-        private static readonly Dictionary<int, Tuple<int, int>> ItemCoordinates = new()
+        private static readonly Dictionary<int, Tuple<int, int>> InventoryPositions = new()
         {
             { 1, new Tuple<int, int>(0, 0) },
             { 2, new Tuple<int, int>(0, 1) },
@@ -51,23 +52,29 @@ namespace ValheimCharacterEditor.Forms
         };
 
         private readonly List<Item> _inventory;
-        private readonly string _characterName;
-        private readonly string _imagesPath = Path.Combine(Application.StartupPath, "Images");
+        private readonly CharacterEntity _character;
 
-        public FrmInventory(List<Item> inventory, string characterName)
+        private FrmInventory(CharacterEntity character)
         {
-            if (inventory == null) throw new ArgumentNullException(nameof(inventory));
-            if (characterName == string.Empty) throw new ArgumentNullException(nameof(characterName));
+            if (character == null) throw new ArgumentNullException(nameof(character));
 
-            _inventory = inventory;
-            _characterName = characterName;
+            _character = character;
+            _inventory = character.Data.Inventory;
 
             InitializeComponent();
         }
 
+        public static List<Item> GetInventoryModification(Form parent, CharacterEntity character)
+        {
+            using FrmInventory frmInventory = new FrmInventory(character);
+            if (frmInventory.ShowDialog(parent) != DialogResult.OK) return null;
+
+            return frmInventory._inventory;
+        }
+
         private void FrmInventory_Load(object sender, EventArgs e)
         {
-            Text = $"Editing character inventory: {_characterName}";
+            Text = $"Editing character inventory: {_character.Data.Name}";
             PopulateInventory();
         }
 
@@ -85,34 +92,15 @@ namespace ValheimCharacterEditor.Forms
 
                 if (pictureBox == null) continue;
 
-                Image itemImage = Image.FromFile(GetImagePath(item));
+                Image itemImage = Image.FromFile(item.GetImagePath());
                 pictureBox.Image = itemImage;
                 pictureBox.Tag = item;
             }
         }
 
-        private string GetImagePath(Item item)
-        {
-            string path;
-
-            if (GameObjects.ItemProperties.ContainsKey(item.Name))
-            {
-                GameObjectProperties gameObject = GameObjects.ItemProperties[item.Name];
-
-                if (gameObject.MaxVariants > 1 && item.Variant > 0)
-                    path = Path.Combine(_imagesPath, $"{item.Name}{item.Variant}.png");
-                else
-                    path = Path.Combine(_imagesPath, $"{item.Name}.png");
-            }
-            else
-                path = Path.Combine(_imagesPath, $"{item.Name}.png");
-
-            return !File.Exists(path) ? Path.Combine(_imagesPath, "QuestionMark.png") : path;
-        }
-
         private int GetItemSequentialId(int x, int y)
         {
-            return ItemCoordinates.FirstOrDefault(v => v.Value.Item1 == y && v.Value.Item2 == x).Key;
+            return InventoryPositions.FirstOrDefault(v => v.Value.Item1 == y && v.Value.Item2 == x).Key;
         }
 
         private void PictureBox_MouseEnter(object sender, EventArgs e)
@@ -124,18 +112,95 @@ namespace ValheimCharacterEditor.Forms
             {
                 labelItemName.Text = "Empty slot";
                 labelQuantity.Text = "-";
+                labelDurability.Text = "-";
+                labelVariant.Text = "-";
                 return;
             }
 
             string name = GameObjects.ItemProperties[item.Name].DisplayName;
+
             labelItemName.Text = name;
             labelQuantity.Text = item.Stack.ToString();
+            labelDurability.Text = item.GetMaxDurability().ToString(CultureInfo.CurrentCulture);
+            labelVariant.Text = item.Variant.ToString();
         }
 
         private void PictureBox_MouseLeave(object sender, EventArgs e)
         {
             labelItemName.Text = "-";
             labelQuantity.Text = "-";
+        }
+
+        private void PictureBox_DoubleClick(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = (PictureBox) sender;
+            Item item = (Item) pictureBox.Tag;
+
+            Item modified = ModifyItem(item, GetInventoryPosition(pictureBox));
+
+            if (modified == null) return;
+
+            pictureBox.Tag = modified;
+            pictureBox.Image = Image.FromFile(modified.GetImagePath());
+        }
+
+        private void editItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = (PictureBox)((ContextMenuStrip)((ToolStripMenuItem)sender).Owner).SourceControl;
+            Item item = (Item)pictureBox.Tag;
+
+            Item modified = ModifyItem(item, GetInventoryPosition(pictureBox));
+
+            if (modified == null) return;
+
+            pictureBox.Tag = modified;
+            pictureBox.Image = Image.FromFile(modified.GetImagePath());
+        }
+
+        private Item ModifyItem(Item item, Tuple<int, int> position)
+        {
+            Item modified = FrmItemEditor.GetItemModification(this, item, _character);
+            if (modified == null) return null;
+
+            // Inventory coordinates are reversed in Valheim for some weird reason
+            // Therefore x is y and y is x
+            modified.Position ??= new Tuple<int, int>(position.Item2, position.Item1);
+
+            _inventory.Remove(item);
+            _inventory.Add(modified);
+
+            return modified;
+        }
+
+        private void deleteItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = (PictureBox) ((ContextMenuStrip) ((ToolStripMenuItem) sender).Owner).SourceControl;
+            Item item = (Item)pictureBox.Tag;
+
+            _inventory.Remove(item);
+
+            pictureBox.Image = null;
+            pictureBox.Tag = null;
+        }
+
+        private Tuple<int, int> GetInventoryPosition(PictureBox pictureBox)
+        {
+            bool result = int.TryParse(pictureBox.Name.Replace("pbSlot", ""), out int index);
+            if (!result) return null;
+
+            return InventoryPositions[index];
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
     }
 }
