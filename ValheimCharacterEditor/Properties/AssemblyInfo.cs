@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ValheimCharacterEditor")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Valheim Character Editor")]
+[assembly: AssemblyDescription("A character editor for the Valheim game.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ValheimCharacterEditor")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Nikolas Andreou")]
+[assembly: AssemblyProduct("Valheim Character Editor")]
+[assembly: AssemblyCopyright("Copyright ©2021 Nikolas Andreou. All rights reserved.")]
+[assembly: AssemblyTrademark("Copyright ©2021 Nikolas Andreou. All rights reserved.")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
