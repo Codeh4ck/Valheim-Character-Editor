@@ -63,7 +63,7 @@ namespace ValheimCharacterEditor.Utilities
                 */
 
                 CharacterEntity characterCopy = CharacterParser.ReadCharacterFile(file);
-                CharactersUnmodified.Add(character);
+                CharactersUnmodified.Add(characterCopy);
             }
         }
 
