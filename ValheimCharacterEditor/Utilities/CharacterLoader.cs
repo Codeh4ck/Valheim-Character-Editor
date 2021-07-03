@@ -8,15 +8,23 @@ namespace ValheimCharacterEditor.Utilities
 {
     public class CharacterLoader
     {
-        public static List<CharacterEntity> Characters { get; set; }
+        public static List<CharacterEntity> Characters { get; private set; }
+        public static List<CharacterEntity> CharactersUnmodified { get; private set; }
 
         static CharacterLoader()
         {
             Characters = new List<CharacterEntity>();
+            CharactersUnmodified = new List<CharacterEntity>();
         }
 
         public static void LoadCharacters()
         {
+            if (Characters.Count > 0) 
+                Characters = new List<CharacterEntity>();
+
+            if (CharactersUnmodified.Count > 0)
+                CharactersUnmodified = new List<CharacterEntity>();
+
             string charactersDirectory = Path.Combine(Constants.ValheimBasePath, "characters");
 
             while (!Directory.Exists(charactersDirectory))
@@ -43,10 +51,19 @@ namespace ValheimCharacterEditor.Utilities
 
             foreach (string file in fchFiles)
             {
-                CharacterParser parser = new CharacterParser(file);
-                parser.ReadCharacterData();
+                CharacterEntity character = CharacterParser.ReadCharacterFile(file);
+                Characters.Add(character);
 
-                Characters.Add(parser.Character);
+                /*
+                    The reason we re-read the files is to create a deep copy of each character,
+                    in order to use later as references to compare character changes.
+
+                    While we can use MemberwiseClone() to perform copies,
+                    this approach is more tidy in exchange for some performance impact 
+                */
+
+                CharacterEntity characterCopy = CharacterParser.ReadCharacterFile(file);
+                CharactersUnmodified.Add(character);
             }
         }
 
