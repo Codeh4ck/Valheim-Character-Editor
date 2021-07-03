@@ -26,7 +26,7 @@ namespace ValheimCharacterEditor.Forms
             Assembly assembly = Assembly.GetExecutingAssembly();
             FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
 
-            labelProductName.Text += $" v{fileVersionInfo.FileMajorPart}.{fileVersionInfo.FileMinorPart}";
+            labelProductName.Text += $" v{fileVersionInfo.FileMajorPart}.{fileVersionInfo.FileMinorPart}.{fileVersionInfo.FileBuildPart}";
 
             Focus();
         }
