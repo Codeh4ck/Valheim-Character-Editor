@@ -11,11 +11,20 @@ namespace ValheimCharacterEditor.Utilities.Extensions
                 (int)(vector.X * 255), (int)(vector.Y * 255), (int)(vector.Z * 255));
         }
 
-        public static void FromColor(this Vector3 vector, Color color)
+        public static Vector3 FromColor(this Vector3 vector, Color color)
         {
             vector.X = color.R / 255.0F;
             vector.Y = color.G / 255.0F;
             vector.Z = color.B / 255.0F;
+
+            return vector;
+        }
+
+
+        public static string ToColorString(this Vector3 vector)
+        {
+            Color color = vector.ToColor();
+            return $"R: {color.R}, G: {color.G}, B: {color.B}";
         }
     }
 }
