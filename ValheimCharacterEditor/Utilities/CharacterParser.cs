@@ -11,17 +11,7 @@ namespace ValheimCharacterEditor.Utilities
 {
     public class CharacterParser
     {
-        public CharacterEntity Character { get; private set; }
-        
-        private readonly string _characterFile;
-
-        public CharacterParser(string characterFile)
-        {
-            if (string.IsNullOrEmpty(characterFile)) throw new ArgumentNullException(nameof(characterFile));
-            _characterFile = characterFile;
-        }
-
-        private BinaryStream LoadBinaryFile(string path)
+        private static BinaryStream LoadBinaryFile(string path)
         {
             using FileStream fileStream = File.OpenRead(path);
 
@@ -33,21 +23,21 @@ namespace ValheimCharacterEditor.Utilities
             return new BinaryStream(data);
         }
 
-        public Character ReadCharacterData()
+        public static CharacterEntity ReadCharacterFile(string characterFile)
         {
             Character character = new Character();
-
-            Character = new CharacterEntity()
+            
+            CharacterEntity characterEntity = new CharacterEntity()
             {
-                Data = character,
-                File = _characterFile
+                File = characterFile,
+                Data = character
             };
 
-            using BinaryStream binaryStream = LoadBinaryFile(_characterFile);
+            using BinaryStream binaryStream = LoadBinaryFile(characterFile);
 
             if (binaryStream.Length == 0)
             {
-                MessageBox.Show($"Could not read file:\n\n{_characterFile}", "File read error!", MessageBoxButtons.OK,
+                MessageBox.Show($"Could not read file:\n\n{characterFile}", "File read error!", MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
                 return null;
             }
@@ -85,7 +75,7 @@ namespace ValheimCharacterEditor.Utilities
             character.Id = binaryStream.ReadInt64();
             character.StartSeed = binaryStream.ReadString();
 
-            if (!binaryStream.ReadBoolean()) return character;
+            if (!binaryStream.ReadBoolean()) return characterEntity;
 
             int dataLength = binaryStream.ReadInt32();
             character.DataVersion = binaryStream.ReadInt32();
@@ -206,10 +196,10 @@ namespace ValheimCharacterEditor.Utilities
                 character.Skills.Add(skill);
             }
 
-            return character;
+            return characterEntity;
         }
 
-        public byte[] WriteCharacterData(Character character)
+        private static byte[] WriteCharacterData(Character character)
         {
             using BinaryStream binaryStream = new BinaryStream();
 
@@ -357,7 +347,7 @@ namespace ValheimCharacterEditor.Utilities
             return length.Concat(final).ToArray().Concat(hashLength).ToArray().Concat(hash).ToArray();
         }
 
-        public string StripInvalidCharacters(string fileName)
+        private static string StripInvalidCharacters(string fileName)
         {
             List<char> invalidCharacters = Path.GetInvalidFileNameChars().ToList();
             StringBuilder fileNameBuilder = new StringBuilder();
@@ -373,11 +363,11 @@ namespace ValheimCharacterEditor.Utilities
             return fileNameBuilder.ToString();
         }
 
-        public bool SaveCharacterFile(string fileName)
+        public static bool SaveCharacterFile(string fileName, CharacterEntity character)
         {
-            if (Character?.Data == null || string.IsNullOrEmpty(Character?.File))
+            if (character?.Data == null || string.IsNullOrEmpty(character?.File))
             {
-                MessageBox.Show("You have not processed a character.", "No character to write!", MessageBoxButtons.OK,
+                MessageBox.Show("You may not save an empty character.", "No character to write!", MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
 
                 return false;
@@ -396,10 +386,10 @@ namespace ValheimCharacterEditor.Utilities
                 if (closeValheim == DialogResult.No) return false;
             }
 
-            string newFileName = StripInvalidCharacters(Character.Data.Name) + ".fch";
-            Character.File = Path.Combine(Path.GetDirectoryName(Character.File), newFileName);
+            string newFileName = StripInvalidCharacters(character.Data.Name) + ".fch";
+            character.File = Path.Combine(Path.GetDirectoryName(character.File)!, newFileName);
 
-            File.WriteAllBytes(Character.File, WriteCharacterData(Character.Data));
+            File.WriteAllBytes(character.File, WriteCharacterData(character.Data));
 
             return true;
         }
