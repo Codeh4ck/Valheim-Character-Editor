@@ -75,6 +75,7 @@ namespace ValheimCharacterEditor.Forms
             this.linkAbout.TabIndex = 4;
             this.linkAbout.TabStop = true;
             this.linkAbout.Text = "Software information";
+            this.linkAbout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAbout_LinkClicked);
             // 
             // FrmMain
             // 

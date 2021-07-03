@@ -34,5 +34,11 @@ namespace ValheimCharacterEditor.Forms
 
             Close();
         }
+
+        private void linkAbout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            using FrmAbout frmAbout = new FrmAbout();
+            frmAbout.ShowDialog(this);
+        }
     }
 }
