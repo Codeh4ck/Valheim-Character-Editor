@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
@@ -20,6 +21,46 @@ namespace ValheimCharacterEditor.Forms
         {
             Text = $"Editing character: {_characterEntity.Data.Name}";
             PopulateFields();
+
+
+            // We're hooking these events after loading the character to prevent any unintentional modification
+            cbGender.SelectedIndexChanged += cbGender_SelectedIndexChanged;
+            cbBeard.SelectedIndexChanged += cbBeard_SelectedIndexChanged;
+            cbHair.SelectedIndexChanged += cbHair_SelectedIndexChanged;
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            // First, verify that the name is valid
+            if (!(txtName.Text.Length is >= 3 and <= 15))
+            {
+                MessageBox.Show("Character name must be 3 to 15 characters long.", "Invalid character name!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                return;
+            }
+
+            foreach (char c in txtName.Text)
+            {
+                if (Constants.NameDisallowedCharacters.Contains(c))
+                {
+                    MessageBox.Show($"Your character name contains invalid characters.\n\nInvalid character: {c}",
+                        "Invalid character name!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    return;
+                }
+            }
+
+            _characterEntity.Data.Name = txtName.Text;
+
+            bool result = FrmSaveCharacter.SaveCharacter(this, _characterEntity);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            FrmMain frmMain = new FrmMain();
+            frmMain.Show();
+            Close();
         }
 
         private void PopulateFields()
@@ -32,8 +73,7 @@ namespace ValheimCharacterEditor.Forms
             try
             {
                 cbBeard.SelectedIndex =
-                    cbBeard.FindStringExact(
-                        Constants.Beards[Constants.InternalBeards.IndexOf(_characterEntity.Data.Beard)]);
+                    cbBeard.FindStringExact(Constants.GetBeardName(_characterEntity.Data.Beard));
             }
             catch
             {
@@ -43,8 +83,7 @@ namespace ValheimCharacterEditor.Forms
             try
             {
                 cbHair.SelectedIndex =
-                    cbHair.FindStringExact(
-                        Constants.Hairs[Constants.InternalHairs.IndexOf(_characterEntity.Data.Hair)]);
+                    cbHair.FindStringExact(Constants.GetHairName(_characterEntity.Data.Hair));
 
             }
             catch
@@ -76,6 +115,8 @@ namespace ValheimCharacterEditor.Forms
 
             if (colorDialog.ShowDialog(this) != DialogResult.OK) return;
             panelSkinTone.BackColor = colorDialog.Color;
+
+            _characterEntity.Data.SkinColor = new Vector3().FromColor(colorDialog.Color);
         }
 
         private void btnEditHairColor_Click(object sender, EventArgs e)
@@ -89,12 +130,17 @@ namespace ValheimCharacterEditor.Forms
 
             if (colorDialog.ShowDialog(this) != DialogResult.OK) return;
             panelHairColor.BackColor = colorDialog.Color;
+
+            _characterEntity.Data.HairColor = new Vector3().FromColor(colorDialog.Color);
         }
 
         private void btnEditInventory_Click(object sender, EventArgs e)
         {
-            using FrmInventory frmInventory = new FrmInventory(_characterEntity.Data.Inventory, _characterEntity.Data.Name);
-            frmInventory.ShowDialog(this);
+            List<Item> inventory = FrmInventory.GetInventoryModification(this, _characterEntity);
+
+            if (inventory == null) return;
+
+            _characterEntity.Data.Inventory = inventory;
         }
 
         private Tuple<TrackBar, Label> GetSkillControls(Skill skill)
@@ -128,13 +174,18 @@ namespace ValheimCharacterEditor.Forms
         private void SkillTrackBar_Scroll(object sender, EventArgs e)
         {
             TrackBar trackbar = (TrackBar)sender;
-
             string skillName = trackbar.Name.ToLower().Replace("trackbar", "");
 
             foreach (Label c in groupSkills.Controls.OfType<Label>())
             {
                 if (c.Name.ToLower().Replace("label", "") == skillName)
                     c.Text = trackbar.Value.ToString();
+            }
+
+            foreach (Skill skill in _characterEntity.Data.Skills)
+            {
+                if (skill.SkillName.ToString("F").ToLower() == skillName)
+                    skill.Level = trackbar.Value;
             }
         }
 
@@ -145,6 +196,23 @@ namespace ValheimCharacterEditor.Forms
                 trackbar.Value = (int)numSetAll.Value;
                 SkillTrackBar_Scroll(trackbar, new ScrollEventArgs(ScrollEventType.ThumbTrack, trackbar.Value));
             }
+        }
+
+        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _characterEntity.Data.Gender = Constants.GetInternalGender(cbGender.SelectedItem.ToString());
+        }
+
+        private void cbBeard_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _characterEntity.Data.Beard =
+                Constants.InternalBeards[Constants.Beards.IndexOf(cbBeard.SelectedItem.ToString())];
+        }
+
+        private void cbHair_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _characterEntity.Data.Hair =
+                Constants.InternalHairs[Constants.Hairs.IndexOf(cbHair.SelectedItem.ToString())];
         }
     }
 }

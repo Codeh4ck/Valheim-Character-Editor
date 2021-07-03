@@ -798,6 +798,7 @@ namespace ValheimCharacterEditor.Forms
             this.btnApply.TabIndex = 3;
             this.btnApply.Text = "Apply changes";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // btnCancel
             // 
@@ -807,6 +808,7 @@ namespace ValheimCharacterEditor.Forms
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel && return";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label7
             // 
