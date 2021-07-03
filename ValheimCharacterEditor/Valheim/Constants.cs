@@ -110,10 +110,35 @@ namespace ValheimCharacterEditor.Valheim
             if (gender.ToLower() == "male") return 0;
             return 1;
         }
+
         public static string GetGenderName(int gender)
         {
             if (gender == 0) return "Male";
             return "Female";
+        }
+
+        public static string GetInternalBeard(string beard)
+        {
+            int index = Beards.IndexOf(beard);
+            return InternalBeards[index] ?? "Unknown";
+        }
+
+        public static string GetBeardName(string internalBeard)
+        {
+            int index = InternalBeards.IndexOf(internalBeard);
+            return Beards[index] ?? "Unknown";
+        }
+
+        public static string GetInternalHair(string hair)
+        {
+            int index = Hairs.IndexOf(hair);
+            return InternalHairs[index] ?? "Unknown";
+        }
+
+        public static string GetHairName(string internalHair)
+        {
+            int index = InternalHairs.IndexOf(internalHair);
+            return Hairs[index] ?? "Unknown";
         }
     }
 }
